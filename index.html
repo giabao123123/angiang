@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>An Giang</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="logo an giang/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="./web con.css">
+</head>
+<body class="w3-light-grey  " style="padding-top: 110px;" id="hero">  
+      <a href="#hero" class="scroll-top-button">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <aside id="backToTop">
+  <a href="#hero" aria-label="Lên đầu trang">
+    <span class="arrow arrow-1"></span>
+    <span class="arrow arrow-2"></span>
+  </a>
+</aside>
+    <aside class="box w3-right" style="margin-top: 2%;">
+      <p class="text">Chào mừng đến với tỉnh An Giang!</p>
+    </aside>
+  <header class="w3-top  " id="hero" >
+  <nav class="w3-bar w3-white w3-padding w3-card" style="letter-spacing: 4px;">
+  <a href="#home" class="w3-bar-item  neon-box">AN GIANG</a>
+       <button class="scroll-btn left-btn w3-hide-small w3-hide-medium" >❮</button>
+       <button class="scroll-btn right-btn w3-hide-small w3-hide-medium">❯</button>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon ">☰</label>
+  <ul style="   background: linear-gradient(180deg, #ff9800, #ff5722); color: #fffaf0;" class="menu w3-right w3-button" id="menu-list">
+    <li><a href="#about">LỊCH SỬ HÌNH THÀNH</a></li>
+    <li><a href="#menu">ĐỊA LÝ</a></li>
+    <li><a href="#khihau">KHÍ HẬU</a></li>
+    <li><a href="#DIEUKIENTUNHIEN">ĐIỀU KIỆN TỰ NHIÊN</a></li>
+    <li><a href="#contact" >DÂN CƯ</a></li>
+    <li><a href="#VANHOA">VĂN HOÁ</a></li>
+    <li><a href="#DITICH">DI TÍCH, DI SẢN VĂN HOÁ</a></li>
+    <li><a href="#GIAODUC">GIÁO DỤC</a></li>
+    <li><a href="#KINHTE">KINH TẾ</a></li>
+    <li><a href="#AMTHUC">ẨM THỰC</a></li>
+    <li><a href="#DULICH">DU LỊCH</a></li>
+    <li><a href="#tiemnang">TIỀM NĂNG PHÁT TRIÊN</a></li>
+    <li><a href="https://giabao123123.github.io/trochoiangiang/">TRÒ CHƠI</a></li>
+  </ul>
+  <script>
+    const menuLinks = document.querySelectorAll('#menu-list a');
+    const menuToggle = document.getElementById('menu-toggle');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 768) {
+          menuToggle.checked = false;
+        }
+      });
+    });
+  </script>
+   <nav style="background: linear-gradient(180deg, #ff9800, #ff5722);color: #fff3cd;" class="w3-animate-left w3-hide-small   neon-box">
+   <div class="menu-scroll">
+    <a href="#about" class="w3-bar-item w3-button">LỊCH SỬ HÌNH THÀNH</a>
+    <a href="#menu" class="w3-bar-item w3-button">ĐỊA LÝ</a>
+    <a href="#DIEUKIENTUNHIEN" class="w3-bar-item w3-button">ĐIỀU KIỆN TỰ NHIÊN</a>
+    <a href="#khihau" class="w3-bar-item w3-button">KHÍ HẬU</a>
+    <a href="#contact" class="w3-bar-item w3-button">DÂN CƯ</a>
+    <a href="#VANHOA" class="w3-bar-item w3-button ">VĂN HOÁ</a>
+    <a href="#DITICH" class="w3-bar-item w3-button">DI TÍCH, DI SẢN VĂN HOÁ</a>
+    <a href="#GIAODUC" class="w3-bar-item w3-button">GIÁO DỤC</a>
+    <a href="#KINHTE" class="w3-bar-item w3-button">KINH TẾ</a>
+    <a href="#AMTHUC" class="w3-bar-item w3-button">ẨM THỰC</a>
+    <a href="#DULICH" class="w3-bar-item w3-button">DU LỊCH</a>
+    <a href="#tiemnang" class="w3-bar-item w3-button">TIỀM NĂNG PHÁT TRIÊN</a>
+    <a href="https://giabao123123.github.io/trochoiangiang/" class="w3-bar-item w3-button">TRÒ CHƠI</a>
+    </div>
+</nav>
+  </nav>
+</header>
+<script>
+const menuScroll = document.querySelector('.menu-scroll');
+const btnLeft = document.querySelector('.left-btn');
+const btnRight = document.querySelector('.right-btn');
+const step = 200;
+btnRight.addEventListener('click', () => {
+  menuScroll.scrollLeft += step;
+});
+btnLeft.addEventListener('click', () => {
+  menuScroll.scrollLeft -= step;
+});
+</script>
+
+<main class="w3-content" style="max-width:1100px">
+  <section class="w3-row w3-padding-16 w3-center" id="about">
+          <h1 class="w3-center" style="color: red;font-size: 35px;">LỊCH SỬ HÌNH THÀNH</h1>
+      <article>
+        <p class="w3-large"> Tên gọi “An Giang” xuất hiện từ thời nhà Nguyễn, mang nghĩa “sông nước bình yên”, chính thức được dùng từ năm 1832 dưới triều Minh Mạng khi tỉnh An Giang được thành lập trong hệ thống Lục tỉnh Nam Kỳ. Vùng đất này vốn là Tầm Phong Long, đặt làm đạo Châu Đốc từ năm 1757, sau đó mang tên Châu Đốc Tân Cương dưới thời Gia Long và thuộc trấn Vĩnh Thanh từ năm 1808. Trải qua nhiều biến đổi hành chính với các tên gọi như Châu Hà, Long Châu Tiền, Long Châu Hà hay Long Châu Hậu, An Giang dần trở thành nơi sinh sống của cộng đồng đa dạng gồm người Kinh, Hoa, Chăm, Khmer. Từ thời Minh Mạng đến nay, tỉnh liên tục được điều chỉnh địa giới và nâng cấp đô thị, nổi bật như việc thành lập thành phố Long Xuyên (1999), thành phố Châu Đốc (2013), thị xã Tịnh Biên (2023) và các lần công nhận đô thị loại I, II. Mốc mới nhất là Nghị quyết 60-NQ/TW (12/4/2025) quyết định hợp nhất tỉnh An Giang và Kiên Giang, giữ tên tỉnh mới là An Giang và đặt trung tâm hành chính tại Kiên Giang.</p>
+        <p style="font-size: 15px" class="w3-col">(nguồn thông tin: <a href="https://baocaovien.vn/tin-tuc/lich-su-tinh-an-giang-cua-ngo-giao-thuong-quoc-te-quan-trong-cua-vung/215038.html">baocaovien.vn</a> )</p>
+      </article>
+      <figure>
+        <img src="https://thiennhienmoitruong.vn/upload/images/nd-13/06.png" alt="" style="display:block; margin:auto;">
+        <figcaption style="font-size: 15px">(nguồn hình ảnh: <a href="https://thiennhienmoitruong.vn/phe-duyet-quy-hoach-tinh-an-giang-thoi-ky-2021-2030-tam-nhin-2050.html">thiennhienmoitruong.vn</a> )</figcaption>
+      </figure>
+    </section>
+  <hr>
+  <section class="w3-row-padding w3-padding-16 " id="menu">
+      <h1 class="w3-padding-16"  style="color: red ;font-size: 50px;">ĐỊA LÝ</h1>
+      <article>
+        <p>
+          -Tỉnh An Giang nằm về phía tây nam đồng bằng sông Cửu Long, cách Thành phố Hồ Chí Minh 187 km, có vị trí địa lý: <br>
+          -Tỉnh An Giang có tổng diện tích tự nhiên hơn 3.500 km², trong đó diện tích đất sản xuất nông nghiệp 280.658 ha, đất lâm nghiệp 14.724 ha, bằng 1,03% diện tích cả nước và đứng thứ 4 so với 13 tỉnh đồng bằng sông Cửu Long.
+  <br>
+  -An Giang là tỉnh duy nhất của vùng Đồng bằng sông Cửu Long có địa bàn ở cả hai bờ sông Cửu Long. <br>
+          <b>-Điểm cực của tỉnh:</b>
+          <ul>
+            <li><p>Điểm cực Bắc của tỉnh nằm ở vĩ độ 10°57'B (xã Khánh An, huyện An Phú).</p></li>
+            <li> <p>cực Nam ở vĩ độ 10°10'60"B (xã Bình Thành, huyện Thoại Sơn).</p></li>
+            <li> <p>cực Tây ở 104°46'Đ (xã Vĩnh Gia, huyện Tri Tôn)</p></li>
+            <li> <p>cực Đông trên kinh độ 105°35'Đ (xã Bình Phước Xuân, huyện Chợ Mới).</p></li>
+          </ul>
+          <p><b>-Tiếp giáp:</b></p>
+          <ul>
+            <li><p>Phía đông giáp tỉnh Đồng Tháp dài 107 km</p></li>
+            <li><p>Phía tây giáp Vịnh Thái Lan</p></li>
+            <li><p>Phía nam giáp thành phố Cần Thơ và tỉnh Cà Mau</p></li>
+            <li><p>Phía bắc giáp tỉnh Kandal, tỉnh Takéo và tỉnh Kampot, Vương quốc Campuchia với đường biên giới dài gần 160,8 km.</p></li>
+          </ul>
+          <p style="font-size: 15px">(nguồn thông tin: <a href="https://vi.wikipedia.org/wiki/An_Giang">wiki An Giang</a> )</p>
+        </article>
+    <figure class="w3-center">
+      <img style="display:block; margin:auto;" src="https://cdn.thuvienphapluat.vn/uploads/nhadat/2025/DTTM/BD-An-Giang.jpg" class="w3-round w3-image w3-opacity-min w3-center  " alt="Menu" style="width:75%"> <div class="text-overlay"></div>
+      <figcaption style="font-size: 15px">(nguồn hình ảnh: <a href="https://cdn.thuvienphapluat.vn/uploads/nhadat/2025/DTTM/BD-An-Giang.jpg">thuvienphapluat.vn</a> )</figcaption>
+    </figure>
+  </section>
+  <hr>
+    <section class="w3-row w3-padding-16" id="DIEUKIENTUNHIEN">
+      <h1 class="w3-center" style="font-size: 50px;">ĐIỀU KIỆN TỰ NHIÊN</h1>
+      <article>
+        <P>-An Giang là tỉnh đầu nguồn sông Cửu Long, có hệ thống giao thông thuận tiện bao gồm giao thông thủy và giao thông bộ. Tỉnh có mạng lưới giao thông quan trọng trong khu vực và có cửa khẩu quốc tế Tịnh Biên và Vĩnh Xương.
+<br>
+-An Giang có nguồn nước mặt và nước ngầm phong phú. Hai con sông chính là Sông Tiền và Sông Hậu chảy qua tỉnh với lưu lượng trung bình năm khoảng 13.800 m³/s. Ngoài ra, tỉnh còn có nhiều tuyến sông, rạch và kênh khác. Tuy chế độ thủy văn của tỉnh phụ thuộc vào chế độ nước của Sông Mê Kông, nhưng tỉnh cũng phải đối mặt với tác động tiêu cực của lũ, gây thiệt hại đến cuộc sống và kinh tế địa phương.
+<br>
+-Về đất đai và thổ nhưỡng, An Giang có 6 nhóm chính, trong đó nhóm đất phù sa chiếm tỷ lệ lớn với diện tích 151.600 ha, tương đương 44,5% diện tích tự nhiên của tỉnh. Ngoài ra, còn có nhóm đất phát triển tại chỗ và đất phù sa cổ, cùng với đất phèn và các nhóm đất khác.[8]</P>
+        <p style="font-size: 15px">(nguồn thông tin: <a href="https://vi.wikipedia.org/wiki/An_Giang">wiki An Giang</a> )</p>
+      </article>
+      </section>
+        <hr>
+  <section class="w3-container w3-padding-16 table-responsive"  style="overflow-x: auto;" id="khihau">
+        <h1 style="font-size: 50px;">KHÍ HẬU</h1><br>
+    <article>
+      <P>Với vị trí địa lý trên An Giang nằm trong vùng khí hậu nhiệt đới gió mùa, trong năm có 2 mùa rõ rệt gồm mùa mưa và mùa khô. Mùa mưa từ tháng 5 đến tháng 11, mùa khô từ tháng 12 đến tháng 4 năm sau. Nhiệt độ trung bình hàng năm khoảng 27 độ C, lượng mưa trung bình năm khoảng 1.130 mm. Độ ẩm trung bình 75 – 80%, khí hậu cơ bản thuận lợi cho phát triển nông nghiệp</P>
+<table style="width:100%; border-color: rgb(162, 169, 177); background-color: rgb(234, 236, 240);">
+<tbody>
+<tr>
+  <th colspan="14" style="font-size:x-large;">Dữ liệu khí hậu của An Giang</th>
+</tr>
+<tr>
+  <th>Tháng</th>
+  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
+  <th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th>
+  <th>Năm</th>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Trung bình ngày tối đa °C (°F)</th>
+  <td style="background: #FFA144; color:#000000;">31.0<br />(87.8)</td>
+  <td style="background: #FF9B37; color:#000000;">31.8<br />(89.2)</td>
+  <td style="background: #FF8C1A; color:#000000;">32.8<br />(91.0)</td>
+  <td style="background: #FF7F00; color:#000000;">33.6<br />(92.5)</td>
+  <td style="background: #FF7F00; color:#000000;">33.4<br />(92.1)</td>
+  <td style="background: #FF8C1A; color:#000000;">32.7<br />(90.9)</td>
+  <td style="background: #FF9429; color:#000000;">32.3<br />(90.1)</td>
+  <td style="background: #FF9B37; color:#000000;">32.1<br />(89.8)</td>
+  <td style="background: #FF9B37; color:#000000;">31.7<br />(89.1)</td>
+  <td style="background: #FFA144; color:#000000;">31.4<br />(88.5)</td>
+  <td style="background: #FFA144; color:#000000;">31.1<br />(88.0)</td>
+  <td style="background: #FFB05A; color:#000000;">30.8<br />(87.4)</td>
+  <td style="background: #FF9B37; color:#000000;">32.1<br />(89.8)</td>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Trung bình ngày °C (°F)</th>
+  <td style="background: #FFCB97; color:#000000;">26.2<br />(79.2)</td>
+  <td style="background: #FFC588; color:#000000;">26.8<br />(80.2)</td>
+  <td style="background: #FFB877; color:#000000;">27.9<br />(82.2)</td>
+  <td style="background: #FFAC66; color:#000000;">28.8<br />(83.8)</td>
+  <td style="background: #FFAC66; color:#000000;">28.7<br />(83.7)</td>
+  <td style="background: #FFB877; color:#000000;">28.2<br />(82.8)</td>
+  <td style="background: #FFB877; color:#000000;">27.9<br />(82.2)</td>
+  <td style="background: #FFBF82; color:#000000;">27.8<br />(82.0)</td>
+  <td style="background: #FFBF82; color:#000000;">27.6<br />(81.7)</td>
+  <td style="background: #FFCB97; color:#000000;">27.2<br />(81.0)</td>
+  <td style="background: #FFD2A5; color:#000000;">26.7<br />(80.1)</td>
+  <td style="background: #FFD9B3; color:#000000;">26.3<br />(79.3)</td>
+  <td style="background: #FFBF82; color:#000000;">27.5<br />(81.5)</td>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Tối thiểu trung bình ngày °C (°F)</th>
+  <td style="background: #FFE0C0; color:#000000;">22.5<br />(72.5)</td>
+  <td style="background: #FFD9B3; color:#000000;">23.1<br />(73.6)</td>
+  <td style="background: #FFD2A5; color:#000000;">24.0<br />(75.2)</td>
+  <td style="background: #FFCB97; color:#000000;">25.1<br />(77.2)</td>
+  <td style="background: #FFCB97; color:#000000;">25.4<br />(77.7)</td>
+  <td style="background: #FFD2A5; color:#000000;">25.2<br />(77.4)</td>
+  <td style="background: #FFD2A5; color:#000000;">25.0<br />(77.0)</td>
+  <td style="background: #FFD2A5; color:#000000;">25.0<br />(77.0)</td>
+  <td style="background: #FFD2A5; color:#000000;">24.8<br />(76.6)</td>
+  <td style="background: #FFD9B3; color:#000000;">24.3<br />(75.7)</td>
+  <td style="background: #FFE0C0; color:#000000;">23.6<br />(74.5)</td>
+  <td style="background: #FFE0C0; color:#000000;">22.9<br />(73.2)</td>
+  <td style="background: #FFD9B3; color:#000000;">24.2<br />(75.6)</td>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Lượng mưa trung bình mm (inches)</th>
+  <td style="background: #E8FFE8; color:#000000;">10<br />(0.4)</td>
+  <td style="background: #DFFFDF; color:#000000;">15<br />(0.6)</td>
+  <td style="background: #C8FFC8; color:#000000;">40<br />(1.6)</td>
+  <td style="background: #80FF80; color:#000000;">90<br />(3.5)</td>
+  <td style="background: #00CC00; color:#FFFFFF;">220<br />(8.7)</td>
+  <td style="background: #009900; color:#FFFFFF;">260<br />(10.2)</td>
+  <td style="background: #007700; color:#FFFFFF;">300<br />(11.8)</td>
+  <td style="background: #006600; color:#FFFFFF;">310<br />(12.2)</td>
+  <td style="background: #009900; color:#FFFFFF;">260<br />(10.2)</td>
+  <td style="background: #22CC22; color:#000000;">180<br />(7.1)</td>
+  <td style="background: #A0FFA0; color:#000000;">70<br />(2.8)</td>
+  <td style="background: #D8FFD8; color:#000000;">25<br />(1.0)</td>
+  <td style="background: #44EE44; color:#000000;">1.780<br />(70.1)</td>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Số ngày mưa trung bình</th>
+  <td style="background: #C0C0FF; color:#000000;">3</td>
+  <td style="background: #C0C0FF; color:#000000;">3</td>
+  <td style="background: #A0A0FF; color:#000000;">6</td>
+  <td style="background: #7070FF; color:#FFFFFF;">10</td>
+  <td style="background: #3838FF; color:#FFFFFF;">17</td>
+  <td style="background: #1A1AFF; color:#FFFFFF;">20</td>
+  <td style="background: #0000EE; color:#FFFFFF;">23</td>
+  <td style="background: #0000CC; color:#FFFFFF;">24</td>
+  <td style="background: #1A1AFF; color:#FFFFFF;">20</td>
+  <td style="background: #5050FF; color:#FFFFFF;">14</td>
+  <td style="background: #9090FF; color:#000000;">7</td>
+  <td style="background: #B0B0FF; color:#000000;">4</td>
+  <td style="background: #4040FF; color:#FFFFFF;">151</td>
+</tr>
+<tr style="text-align: center;">
+  <th scope="row">Độ ẩm tương đối trung bình (%)</th>
+  <td style="background: #AAAAAA; color:#FFFFFF;">72</td>
+  <td style="background: #AAAAAA; color:#FFFFFF;">73</td>
+  <td style="background: #B0B0B0; color:#000000;">75</td>
+  <td style="background: #B8B855; color:#000000;">78</td>
+  <td style="background: #CCCC00; color:#000000;">82</td>
+  <td style="background: #C4C400; color:#000000;">85</td>
+  <td style="background: #BBBB00; color:#000000;">86</td>
+  <td style="background: #B8B800; color:#000000;">87</td>
+  <td style="background: #BBBB00; color:#000000;">85</td>
+  <td style="background: #CCCC00; color:#000000;">82</td>
+  <td style="background: #B8B855; color:#000000;">78</td>
+  <td style="background: #B0B0B0; color:#000000;">75</td>
+  <td style="background: #C0C030; color:#000000;">80</td>
+</tr>
+</tbody>
+</table>
+    <p style="font-size: 15px">(nguồn thông tin: <a href="https://vi.wikipedia.org/wiki/An_Giang">wiki An Giang</a> <br> <a href="https://angiang.gov.vn/vi/vi-tri-chien-luoc-dieu-kien-tu-nhien-tinh-giang-0">angiang.gov.vn</a> <br> <a href="https://baothoitiet.org/an-giang">baothoitiet.org</a> )</p>
+  </article>
+  </section>
+  <hr>
+  <section class="w3-row w3-padding-16" id="contact">
+    <h1 class="w3-center" style="font-size: 50px;">DÂN CƯ</h1>
+    <article> <table style="width:100%">
+    <tr>
+        <th>năm</th>
+        <th>số dân</th> 
+        <th>±%</th>
+        <th>năm</th>
+        <th>số dân</th> 
+        <th>±%</th>
+      </tr>
+      <tr>
+        <td>1999</td>
+        <td>2,129,500</td>
+        <td>—</td>
+        <td>2009</td>
+        <td>2,140,000</td>
+        <td>+0.5%</td>
+      </tr>
+      <tr>
+        <td>2000</td>
+        <td>2,150,000</td>
+        <td>+1.0%</td>
+        <td>2010</td>
+        <td>2,211,000</td>
+        <td>+1.5%</td>
+      </tr>
+      <tr>
+        <td>2001</td>
+        <td>2,180,000</td>
+        <td>+1.4%</td>
+        <td>2011</td>
+        <td>2,250,000</td>
+        <td>+1.8%</td>
+      </tr>
+      <tr>
+        <td>2002</td>
+        <td>2,220,000</td>
+        <td>+1.8%</td>
+        <td>2012</td>
+        <td>2,290,000</td>
+        <td>+1.8%</td>
+      </tr>
+      <tr>
+        <td>2003</td>
+        <td>2,250,000</td>
+        <td>+1.4%</td>
+        <td>2013</td>
+        <td>2,310,000</td>
+        <td>+1.1%</td>
+      </tr>
+      <tr>
+        <td>2004</td>
+        <td>2,280,000</td>
+        <td>+1.3%</td>
+        <td>2014</td>
+        <td>2,350,000</td>
+        <td>+1.6%</td>
+      </tr>
+      <tr>
+        <td>2005</td>
+        <td>2,300,000</td>
+        <td>+1.0%</td>
+        <td>2015</td>
+        <td>2,400,000</td>
+        <td>+2.1%</td>
+      </tr>
+      <tr>
+        <td>2006</td>
+        <td>2,320,000</td>
+        <td>+0.9%</td>
+        <td>2016</td>
+        <td>2,450,000</td>
+        <td>+2.0%</td>
+      </tr>
+      <tr>
+        <td>2007</td>
+        <td>2,340,000</td>
+        <td>+0.8%</td>
+        <td>2017</td>
+        <td>2,500,000</td>
+        <td>+2.0%</td>
+      </tr>
+      <tr>
+        <td>2008</td>
+        <td>2,360,000</td>
+        <td>+0.9%</td>
+        <td>2018</td>
+        <td>2,550,000</td>
+        <td>+2.0%</td>
+      </tr>
+      </table>
+    <p>-Theo thống kê, năm 2020 tỉnh An Giang có diện tích 3.536,83 km², dân số 1.904.532 người, mật độ dân số đạt 539 người/km². An Giang là tỉnh đông dân nhất vùng Đồng bằng sông Cửu Long và đứng thứ 8 cả nước về dân số. Một phần diện tích tỉnh nằm trong vùng Tứ giác Long Xuyên.
+<br>
+-Tính đến 9/8/2019, dân số toàn tỉnh đạt 2.164.200 người, mật độ 612 người/km², trong đó 31,6% dân số sống ở đô thị và 68,4% ở nông thôn. Đến năm 2023, tỷ lệ đô thị hóa đạt khoảng 42%. Dân cư phân bố chủ yếu ở vùng đồng bằng và ven các sông lớn như sông Tiền, sông Hậu, tập trung đông tại TP Long Xuyên và huyện Chợ Mới.
+<br>
+-Toàn tỉnh có 24.011 hộ dân tộc thiểu số với 114.632 người, chiếm 5,17% dân số. Trong đó, dân tộc Khmer đông nhất với 86.592 người (khoảng 3,9% dân số toàn tỉnh), chủ yếu sống ở Tri Tôn và Tịnh Biên. Dân tộc Chăm có 13.722 người, tập trung ở An Phú và Tân Châu; dân tộc Hoa có 14.318 người, chủ yếu sinh sống tại các đô thị.
+<br>
+-Về tôn giáo, An Giang là nơi hình thành nhiều tôn giáo nội sinh như Phật giáo Hòa Hảo, Bửu Sơn Kỳ Hương, Tứ Ân Hiếu Nghĩa. Tỉnh hiện có 9 tôn giáo được công nhận, với khoảng 1,8 triệu tín đồ, chiếm 78% dân số. Tính đến năm 2019, số tín đồ tôn giáo đạt 1.733.332 người, trong đó đông nhất là Phật giáo Hòa Hảo (956.720 người).
+<br>
+-Đến 30/6/2024, dân số tỉnh An Giang còn 1.938.198 người, cho thấy xu hướng giảm dân số nhẹ trong những năm gần đây.
+  <br>
+  -Diện tích mở rộng của tỉnh An Giang: Sau sáp nhập, tỉnh An Giang có diện tích tự nhiên đạt 9.888,91 km², trở thành tỉnh có diện tích lớn nhất khu vực Đồng bằng sông Cửu Long. Diện tích này bao gồm 3.536,8 km² của tỉnh An Giang cũ và 6.352,11 km² của tỉnh Kiên Giang cũ, tạo điều kiện thuận lợi cho phát triển kinh tế biển, nông nghiệp và du lịch.
+<br>
+  -Quy mô dân số tỉnh An Giang: Dân số tỉnh An Giang hiện đạt 4.952.238 người, xếp thứ ba toàn quốc, chỉ sau TP Hồ Chí Minh và Hà Nội. Dân số này bao gồm người Kinh (95,6%), cùng các dân tộc thiểu số như Khơ Me, Chăm và Hoa, tạo nên sự đa dạng văn hóa đặc trưng của vùng.
+<p style="font-size: 15px">(nguồn thông tin: <a href="https://vi.wikipedia.org/wiki/An_Giang">wiki An Giang</a> )</p>
+</p></article>
+</section>
+  <hr>
+   <section class="w3-row w3-padding-16" id="VANHOA">
+      <h1 class="w3-center" style="font-size: 50px;">VĂN HOÁ, LỄ HỘI</h1>
+      <article>
+       <p>
+  <strong>An Giang sau sáp nhập</strong> là vùng đất giàu truyền thống văn hóa – lịch sử, nổi bật với hệ thống di tích, lễ hội dân gian và các làng nghề truyền thống phong phú.  
+  Nơi đây có nhiều di tích lịch sử quan trọng như <mark>Châu Đốc, Núi Sam, Lăng Thoại Ngọc Hầu</mark>, phản ánh truyền thống văn hóa lâu đời gắn với lịch sử hình thành vùng Đồng bằng sông Cửu Long.  
+  An Giang cũng là nơi có nhiều lễ hội đặc sắc như <u>Lễ hội Vía Bà Chúa Xứ</u>, <u>Lễ hội Ok Om Bok</u>, thu hút đông đảo du khách trong và ngoài nước.  
+  Vùng đất này còn nổi danh với các làng nghề truyền thống như <mark>đúc đồng Chợ Mới</mark>, <mark>làng thổ cẩm Chăm ở An Phú</mark>, và nhiều sản phẩm thủ công mỹ nghệ đặc trưng khác.  
+  <u>Ẩm thực An Giang</u> mang đậm bản sắc địa phương với <mark>bún cá Châu Đốc</mark>, <mark>gỏi sầu đâu</mark>, <mark>lẩu mắm</mark>, <mark>cá linh bông điên điển</mark>.  
+  Đến sau sáp nhập, An Giang mở rộng về diện tích và dân số, trở thành tỉnh lớn nhất vùng Đồng bằng sông Cửu Long, đồng thời bảo tồn và phát huy các giá trị văn hóa truyền thống đặc sắc.
+</p>
+
+        <details>
+  <summary class="w3-bar-item w3-button w3-padding" style="font-size:large;"><strong>-Các lễ hội tiêu biểu của tỉnh An Giang:</strong></summary>
+  <ol type="1">
+    <li>Lễ Đôlta và hội đua bò Bảy Núi
+      <p>
+        -Lễ Đôlta và hội đua bò Bảy Núi do đồng bào dân tộc Khơ Me tổ chức từ 29/8 – 1/9 hàng năm. Ý nghĩa của lễ tương tự như Vu Lan của người Kinh là dịp tưởng nhớ công ơn của ông bà cha mẹ và tổ tiên. Hoạt động chính gồm đi chùa chư tăng, dâng lễ cúng và cầu may mắn.
+ <br>
+        -Gắn liền với lễ Đôlta chính là hội đua bò bảy Núi thu hút sự quan tâm của dân địa phương và khách du lịch. Hội đua bò chọn con có sức khỏe, cường tráng để thi đấu. Bò nào giành chiến thắng đều khiến chủ nuôi dưỡng nở mày nở mặt. Nên mỗi nhà dân Khơ Me đều có ít còn bò chiến đợi đến hội sẽ cho thi sức.
+    <figure>
+      <img src="https://angiangtoplist.com/wp-content/uploads/2024/02/le-dolta-va-hoi-dua-bo-bay-nui-angiangtoplist.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://angiangtoplist.com/top-5-cac-le-hoi-truyen-thong-an-giang-duoc-to-chuc-hang-nam/">angiangtoplist.com</a> )</figcaption>
+    </figure>
+  </p>
+    </li>
+    <li>Lễ hội Chol Chnam Thmay An Giang
+<p>
+  -Chol Chnam Thmay hay còn gọi là ngày tết của bà con Khơ Me. Lễ hội theo lịch riêng của dân tộc này khoản từ 14/4 – 16/4 dương lịch hàng năm. Vào ngày đầu năm người dân sẽ mặc quần áo mới, dọn dẹp nhà cửa sạch sẽ để đón khách. Cùng tương tự như lễ tết của người Kinh có nhiều hoạt động như cầu phúc và biểu diễn văn nghệ.
+<br>
+  -Dịp lễ Chol Chnam Thmay đều thu hút lượng lớn du khách đến tham quan. Chủ yếu là tìm hiểu về ngày lễ tết của người Chăm và những điệu nhảy truyền thống. Du khách có thể hòa mình đám đông, diện trang phục Khơ Me để hưởng ứng không khí tết này. Đây cũng là dịp nghỉ ngơi của người Chăm sau một năm làm việc vất cả.
+<figure>
+  <img src="https://angiangtoplist.com/wp-content/uploads/2024/02/le-hoi-chol-chnam-thmay-an-giang-angiangtoplist.jpg " class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://angiangtoplist.com/top-5-cac-le-hoi-truyen-thong-an-giang-duoc-to-chuc-hang-nam/">angiangtoplist.com</a> )</figcaption>
+</figure>
+</p>
+    </li>
+    <li>Lễ hội miếu Bà Chúa Xứ núi Sam
+      <p>
+-Nhắc đến các Lễ hội truyền thống An Giang không thể bỏ qua sự kiện vía Bà Chúa Xứ núi Sam. Miếu bà là một ngôi miếu lớn tại An Gian luôn tấp nập người ra kẻ vào dâng hương. Đối với lễ vía bà sẽ kéo dài  4 ngày từ 22/4 – 27/4 âm lịch hàng năm. Không khí lễ hội tưng bừng với câu chuyện sự tính tâm linh về tượng bà thu hút sự tò mò của du khách.
+<br>
+-Lễ hội miếu Bà Chúa Xứ núi Sam lớn nhất đất Bảy Núi tổ chức kết hợp cùng các màn biểu diễn. Với tiết mục đậm chất nghệ thuật dân gian như rước kiệu, múa lân và trò chơi truyền thống. Lễ hội vía Bà mỗi năm đều đặc sắc được lên kế hoạch tổ chức cả tháng trời. Đây là thời điểm dòng người đổ về An Giang đông đảo muốn chứng kiến lễ hội và dâng hương cho bà.
+<figure>
+  <img src="https://angiangtoplist.com/wp-content/uploads/2024/02/le-hoi-mieu-ba-chua-xu-nui-sam-angiangtoplist.jpg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://angiangtoplist.com/top-5-cac-le-hoi-truyen-thong-an-giang-duoc-to-chuc-hang-nam/">angiangtoplist.com</a> )</figcaption>
+</figure>
+</p>
+    </li>
+    <li>Lễ hội đình Châu Phú
+-Đình thần Phú thờ phụng Thành hoàng Nguyễn Hữu Cảnh người có công khai hoang vùng đất An Giang xưa. Kết hợp hoạt động lễ hội tưởng nhớ còn là dịp để cầu mong bình an, cuộc sống ấm no và hạnh phúc. Quy mô tổ chức lớn duy trì được nét đẹp văn hóa đến hiện tại.
+<br>
+-Lễ hội đình Châu Phú có đoàn xe đi trường sử dụng cà kheo khá lạ mắt. Mỗi năm lễ hội đình làng Châu Phú tổ chức từ 9/5 – 11/5 âm lịch. Đây là lúc  thời tiết nắng nóng nhưng hợp lý cho việc diễu hành bằng cà kheo. Kinh phí tổ chức lễ hội Châu Phi cao đều được sự hỗ trợ của sở  Văn Hóa.
+<figure>
+  <img src="https://angiangtoplist.com/wp-content/uploads/2024/02/le-hoi-dinh-chau-phu-angiangtoplist.jpg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://angiangtoplist.com/top-5-cac-le-hoi-truyen-thong-an-giang-duoc-to-chuc-hang-nam/">angiangtoplist.com</a> )</figcaption>
+</figure>
+    </li>
+    <li>Lễ hội tôn vinh Thoại Ngọc Hầu
+      <p>
+-Lễ hội tôn vinh Thoại Ngọc Hầu tổ chức trong 3 ngày kể từ 9/4 – 11/4 âm lịch. Đây là hội lớn tưởng nhớ công Thoại Ngọc Hầu là danh thần có công đào con lên kênh Vĩnh Tế mang nước về cho nhân dân. Lẽ được tổ chức tại đình Thoại Ngọc Hầu – Thoại Sơn thu hút bà con địa phương và khách du lịch khắp nơi.
+<br>
+Nghi thức lễ hội tôn vinh Thoại Ngọc Hầu đơn giản gồm có thủ tục rước bia tương nhở và dâng hương. Lễ hội truyền thống được lưu giữ đến tận bây giờ, thể hệ con cháu sau vẫn tổ chức theo ông cha. Một phần của nghi lễ là tưởng nhớ và để duy trì nét đẹp văn hóa truyền thống.
+<figure>
+  <img src="https://angiangtoplist.com/wp-content/uploads/2024/02/le-hoi-ton-vinh-thoai-ngoc-hau-angiangtoplist.jpg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://angiangtoplist.com/top-5-cac-le-hoi-truyen-thong-an-giang-duoc-to-chuc-hang-nam/">angiangtoplist.com</a> )</figcaption>
+</figure>
+      </p>
+    </li>
+    <li>Lễ hội Nguyễn Trung Trực 
+-Lễ hội Nguyễn Trung Trực (hay còn gọi là Lễ hội đình ông Nguyễn) là một trong những sự kiện văn hóa tại tỉnh Kiên Giang nhằm tri ân vị anh hùng dân tộc có công lao to lớn trong thời kỳ chống Pháp xâm lược. Với 2 phần lễ và hội được tổ chức song song, những nghi thức cùng hoạt động mang đậm nét đẹp văn hóa nơi đây vừa mang đến nhiều tầng ý nghĩa khác nhau lại là cơ hội tốt để quảng bá và phát triển du lịch địa phương, kéo gần hơn khoảng cách văn hóa giữa 3 miền Bắc - Trung - Nam.
+<figure>
+  <img src="https://mia.vn/media/uploads/blog-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-01-1667337086.jpeg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://mia.vn/cam-nang-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-11365">mia.vn</a> )</figcaption>
+</figure>
+    </li>
+    <li>Lễ hội Trai Đàn Sùng Hưng Cổ Tự
+      <p>
+-Sùng Hưng Cổ Tự là một ngôi chùa cổ có tuổi đời từ cuối thế kỷ thứ 19 đến nay. Đây là công trình kiến trúc cực kì nổi tiếng tại khu vực Đồng bằng sông Cửu Long nói chung và tỉnh ven biển Kiên Giang nói riêng. Vào cuối tháng 7 âm lịch hàng năm, chùa là nơi diễn ra Đại lễ Trai Đàn với những nghi thức truyền thống như thỉnh tiêu diện, thượng giàn, động đàn, công phu, thí cổ... Đến Lễ hội Kiên Giang này, bạn không chỉ có thể chiêm ngưỡng phong cách kiến trúc độc đáo của chùa mà còn có thể tham dự những nghi lễ trang trọng và thưởng thức món chay do Phật tử thiết đãi.
+<figure>
+  <img src="https://mia.vn/media/uploads/blog-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-02-1667337086.jpeg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://mia.vn/cam-nang-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-11365">mia.vn</a> )</figcaption>
+</figure>
+</p>
+    </li>
+    <li> Lễ giỗ Đức Khai Trấn Mạc Cửu
+      <p>
+       -Để tưởng nhớ vị tổng binh tài đức Mạc Cửu, người dân Hà Tiên hàng năm đều tổ chức lễ giỗ cho ông. Đây vừa là nét văn hóa truyền thống gắn liền với vùng đất ven biển, vừa thể hiện và giáo dục đạo lý uống nước nhớ nguồn. Thông thường, Lễ hội Kiên Giang này sẽ có phần nghi thức diễn ra vào 2 ngày 25, 26 tháng 5 âm lịch, trong khi phần hội sẽ được tổ chức từ 11 đến 13 tháng 5, tức kéo dài 3 ngày. Dịp Lễ giỗ Đức Khai Trấn Mạc Cửu cũng là cơ hội rất tốt để quảng bá du lịch địa phương.
+       <figure>
+         <img src="https://mia.vn/media/uploads/blog-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-03-1667337086.jpeg" class="w3-container" alt=""> 
+         <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://mia.vn/cam-nang-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-11365">mia.vn</a> )</figcaption>
+       </figure>
+      </p>
+    </li>
+    <li>Lễ hội Nghinh Ông Hòn Sơn
+      <p>
+-Lễ hội Nghinh Ông Hòn Sơn là một trong những sự kiện văn hóa miền biển lớn nhất tỉnh Kiên Giang. Dịp lễ này thường diễn ra vào ngày 15, 16 tháng 8 âm lịch hàng năm và thu hút đông đảo các bạn gần xa đến tham gia, chung vui cùng không khí hào hứng, nhộn nhịp. Sau phần lễ trang nghiêm tại Lăng Nam Hải, nghi thức rước Ông hoành tráng trong phần hội chắc chắn sẽ để lại trong bạn ấn tượng đặc biệt thú vị.
+<figure>
+  <img src="https://mia.vn/media/uploads/blog-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-04-1667337086.jpeg" class="w3-container" alt="">
+  <figcaption style="font-size: 15px">(nguồn thông tin và hình ảnh : <a href="https://mia.vn/cam-nang-du-lich/top-le-hoi-kien-giang-noi-tieng-voi-net-dep-van-hoa-dac-sac-11365">mia.vn</a> )</figcaption>
+</figure>
+      </p>
+    </li>
+  </ol>
+</details>
+      </article>
+      </section>
+      <hr>
+  <section class="w3-row w3-padding-16" id="DITICH">
+      <h1 class="w3-center" style="font-size: 50px;">DI TÍCH, DI SẢN VĂN HOÁ</h1>
+      <article>
+      <P>
+- Tỉnh hiện có 90 di tích được xếp hạng (2 di tích quốc gia đặc biệt, 28 di tích quốc gia và 60 di tích cấp tỉnh), với đa dạng các loại di tích như: di tích kiến trúc nghệ thuật, di tích khảo cổ, danh lam thắng cảnh, lịch sử văn hóa, đài tưởng niệm danh nhân... "Mỗi di tích được xếp hạng đều có một giá trị lịch sử, văn hóa, nghệ thuật khác nhau, nhưng cùng nhau tạo nên một bức tranh đầy màu sắc về vùng đất An Giang. Tỉnh cũng sở hữu một kho tàng di sản văn hóa phi vật thể độc đáo và đa dạng của các cộng đồng dân tộc Kinh, Khmer, Chăm và Trung Quốc. Đây không chỉ là nguồn di sản văn hóa phong phú mà còn là thế mạnh, tiềm năng phát triển du lịch
+          </P>
+          <details>
+            <summary class="w3-bar-item w3-button w3-padding" style="font-size:large;">
+        -Một số di tích lịch sử: </summary>
+<ol style="list-style-type: decimal;">
+  <li> Miếu Bà Chúa Xứ<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/fa1pPoVjdLNfE49t6" target="_blank">925 Phạm Văn Bạch Khóm, Vĩnh Tây 1, Châu Đốc, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.VoJXO18uYlaGJGWqGaE4LgHaFj?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://benxekhachchaudoc.vn/mieu-ba-chua-xu-nui-sam-chau-doc-an-giang" target="_blank">benxekhachchaudoc.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Lăng Thoại Ngọc Hầu<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/UbgGasTuv4nySuhP6" target="_blank">M3JH+QJP, P. Núi Sam, Châu Đốc, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/05_2025/lang_thoai_ngoc_hau_an_giang_dulichnuisam.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://luhanhvietnam.com.vn/du-lich/lang-thoai-ngoc-hau-an-giang.html" target="_blank">luhanhvietnam.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Tây An<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/orPGmCq3VzqivzNAA" target="_blank">Đường Đ. Vòng Núi Sam, P. Núi Sam, Châu Đốc, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tinviettravel.com.vn/uploads/cam-nang-du-lich/2022_03/tay-an-co-tu.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://tinviettravel.com.vn/cam-nang-du-lich/kham-pha/chua-phat-thay-tay-an-dau-an-noi-mien-bien-cuong-98.html" target="_blank">tinviettravel.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Hang<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/AiuVnrY8VWn6BviA6" target="_blank">P. Núi Sam, Chau Doc, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://ik.imagekit.io/tvlk/blog/2023/05/chua-hang-1.jpg?tr=dpr-2,w-675" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://www.traveloka.com/vi-vn/explore/destination/chua-hang-chau-doc-acc/227943" target="_blank">traveloka.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Nhà mồ Ba Chúc<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/rRq99im5JCCJfTrC8" target="_blank">An Định, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích căm thù<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.119437be8f1c2faa8b63aa9e11de7a9c?rik=otpf117hS%2fqMvw&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://evbn.org/nhung-di-tich-lich-su-o-an-giang-1648919472/" target="_blank">evbn.org</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đồi Tức Dụp<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/CFEadB1dN7VvpArr5" target="_blank">9XG4+WFX, Đ. 15, Phước Thọ, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích cách mạng<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.9efce5354ba985fb9f283ee4f2d2f7dd?rik=%2fVhi%2bNVac%2f261Q&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://thamhiemmekong.com/thong-tin-du-lich-mien-tay/khu-du-lich-doi-tuc-dup-diem-du-lich-hap-dan-cua-giang.html" target="_blank">thamhiemmekong.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Châu Phú<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/pgUmEdRkP1SL4qdZ6" target="_blank">228 Đường Trần Hưng Đạo, Châu Phú A, Châu Đốc, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://cdn.tcdulichtphcm.vn/upload/1-2023/images/2023-02-24/1677216206-chau-ph---2.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://tcdulichtphcm.vn/du-khao/dinh-chau-phu-tuyet-tac-nghe-thuat-mien-bien-gioi-an-giang-c14a48844.html" target="_blank">tcdulichtphcm.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Ông Bắc<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/oi85sjEsEwJMrwWHA" target="_blank">số 68 đường Phạm Hồng Thái, Mỹ Long, Thành phố Long Xuyên, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://www.tourdulichbentre.com/images/gioi-thieu-chua-ong-bac.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://www.tourdulichbentre.com/chua-ong-bac-long-xuyen-an-giang" target="_blank">tourdulichbentre.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Giồng Thành<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/HCqnMKQSm6uzkyMd8" target="_blank">Tân Châu, Long Sơn, Tân Châu, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://thamhiemmekong.com/wp-content/uploads/2019/12/chua-giong-thanh.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://thamhiemmekong.com/thong-tin-du-lich-mien-tay/van-canh-chua-giong-thanh-long-hung-tu-giang.html" target="_blank">thamhiemmekong.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Nguyễn Trung Trực<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/9qhtbcwQhvDXWhkK8" target="_blank">07 Nguyễn Công Trứ, Vĩnh Thanh, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://hatienvegas.com/wp-content/uploads/2024/09/Cong-dinh-Nguyen-Trung-Truc-du-lich-Rach-Gia-Hatienvegas.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://hatienvegas.com/tim-hieu-ve-dinh-nguyen-trung-truc-di-tich-lich-su-van-hoa-tai-thanh-pho-rach-gia-tinh-kien-giang" target="_blank">hatienvegas.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Vĩnh Hòa<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/6VRPzTrt28wsg3Gy8" target="_blank">61 Nguyễn Hùng Sơn, Thanh Vân, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.nKpV02yw7hhndXRqN-GxOgHaFj?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="http://vietlandmarks.com/module/groups/action/view/id/692" target="_blank">vietlandmarks.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đền thờ Quản Cơ Trần Văn Thành<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/eKu6wte2UvpgqaoL7" target="_blank">G4VX+25X, Thạch Mỹ Tây, Châu Phú, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://thamhiemmekong.com/wp-content/uploads/2019/12/den-tho-quan-co-tran-van-thanh.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://thamhiemmekong.com/thong-tin-du-lich-mien-tay/den-tho-quan-co-tran-van-thanh.html" target="_blank">thamhiemmekong.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Quan Đế<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/KLaPiu2gH8xpXRAYA" target="_blank">78 Lê Minh Ngươn, Mỹ Long, Thành phố Long Xuyên, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://top9.com.vn/wp-content/uploads/2020/10/CH%C3%99A-QUAN-%C4%90%E1%BA%BE.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://top9.com.vn/chua-quan-de-chua-ong-bac-lieu-kham-pha-ve-dep/" target="_blank">top9.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Láng Cát<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/MSDyNtcoukJaRtKAA" target="_blank">Vĩnh Lạc, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/12_2022/chua-lang-cat-rach-gia-ss.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://luhanhvietnam.com.vn/du-lich/tham-quan-chua-lang-cat-rach-gia.html" target="_blank">luhanhvietnam.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Phật Lớn<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/PMeSsANyBwmfdMC48" target="_blank">GX3M+GXJ, An Hảo, Tịnh Biên, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử nghệ thuật<br>
+    <figure>
+      <img src="https://toplist.vn/images/800px/chua-phat-lon-922846.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://toplist.vn/top-list/ngoi-chua-co-kien-truc-dep-nhat-tai-viet-nam-12133.htm" target="_blank">toplist.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Tam Bửu<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/LKGABBSk2erbLM9h6" target="_blank">FWX5+74G, Ngô Tự Lợi, An Định, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích căm thù<br>
+    <figure>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.qZwJH0J8LkIgWsnuvbD6twHaEU?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://btgcp.gov.vn/co-so-tho-tu-ton-giao-co-so-tho-tu-tin-nguong/chua-tam-buu-di-tich-lich-su-quoc-gia-tai-an-giang-postwmaxj3Nnr1.html" target="_blank">btgcp.gov.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Phi Lai<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/W2n46hQSPP8YcRdBA" target="_blank">FWX5+WGX, An Định, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích căm thù<br>
+    <figure>
+      <img src="https://baoangiang.com.vn/image/fckeditor/upload/2022/20220707/images/T5DT.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://baoangiang.com.vn/uy-nghi-to-dinh-phi-lai-a337526.html" target="_blank">baoangiang.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Xvayton<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/VrdGbXCEMUphw8Ba6" target="_blank">C2F2+94X, Khóm 5, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://images.baodantoc.vn/uploads/2022/Th%C3%A1ng%201/Ngay_29/NGOC/1.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://baodantoc.vn/nghe-thuat-kien-truc-chua-xvayton-niem-tu-hao-cua-dong-bao-khmer-an-giang-1643475238394.htm" target="_blank">baodantoc.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Thánh Đường Hồi Giáo Mubarak<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/FfJtwoB3fXNV19Ry7" target="_blank">P46H+3C5, Châu Phong, Tân Châu, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.KhBM6T5cmXIQkXrEy0SPxwHaFP?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://mia.vn/cam-nang-du-lich/thanh-duong-hoi-giao-mubarak-dia-diem-check-in-an-tuong-tai-an-giang-8173" target="_blank">mia.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Hòa Thạnh<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/CSKfFrVJjU2awEcs8" target="_blank">JXPR+8W8, Nguyễn Sinh Sắc, Nhơn Hưng, Tịnh Biên, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://sovhttdltuyenquang.vn/wp-content/uploads/2024/01/chua-hoa-thanh-an-giang.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Mỹ Phước<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/WJ4yikey9BwktGf8A" target="_blank">9CMR+8Q2, Nguyễn Huệ A, Mỹ Long, Thành phố Long Xuyên, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.tdHbva8TZVdi7vlaqs0_GwHaE5?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://thamhiemmekong.com/thong-tin-du-lich-mien-tay/dinh-my-phuoc-long-xuyen-di-tich-kien-truc-nghe-thuat-cap-quoc-gia.html" target="_blank">thamhiemmekong.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Đa Phước<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/wXDtVhBJT2gH8J7r5" target="_blank">P47C+MFQ, Phước Thọ, An Phú, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.rTUJNWtRCYrSnDgTzrdFGQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="http://baotangtinhangiang.vn/vi/news/di-tich/di-tich-kien-truc-nghe-thuat-dinh-than-da-phuoc-xa-da-phuoc-huyen-an-phu-77.html" target="_blank">baotangtinhangiang.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Căn cứ cách mạng Ô Tà Sóc<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/phuGHAsXEbNbUDYRA" target="_blank">FW8P+9PV, Lương Phi, Tri Tôn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử cách mạng<br>
+    <figure>
+      <img src="https://media.mia.vn/uploads/blog-du-lich/can-cu-o-ta-soc-bieu-tuong-lich-su-hao-hung-cua-dan-toc-03-1660067712.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://mia.vn/cam-nang-du-lich/can-cu-o-ta-soc-bieu-tuong-lich-su-hao-hung-cua-dan-toc-8348" target="_blank">mia.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Nam Linh Sơn Tự<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/dM16D2sxen3cJQ7y8" target="_blank">65W3+CQV, TT. Óc Eo, Thoại Sơn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích khảo cổ<br>
+    <figure>
+      <img src="https://chonthieng.com/data/uploads/2023/11/chua-linhson.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://chonthieng.com/dia-diem/nam-linh-son-tu-thoai-son-an-giang/" target="_blank">chonthieng.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Gò Cây Thị<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/wsHN2sEFdzByhCtE8" target="_blank">Óc Eo, Thoại Sơn, An Giang, Vietnam</a><br>
+    -Loại di tích: Di tích khảo cổ<br>
+    <figure>
+      <img src="https://media.doanhnghiepvn.vn/Images/Uploaded/Share/2020/12/10/Bi-an-di-tich-khao-co-Go-Cay-Thi_2.jpg?format=webp" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://vtc2.vn/68-diem-di-tich-van-hoa-o-an-giang-572.html" target="_blank">vtc2.vn</a> | <a href="https://doanhnghiepvn.vn/kham-pha/bi-an-di-tich-khao-co-go-cay-thi/20201210080147206" target="_blank">doanhnghiepvn.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Mộ Hội Đồng Suông<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/4QkD47u5yERakj139" target="_blank">Đường Số 03 Khu Nam, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.00a464e0d2c78fef2f330a956bf2a7bc?rik=O8kmGCoiB26zvg&riu=http%3a%2f%2fvietlandmarks.com%2fupload%2f145776317356e3b3657cf3e.jpg&ehk=Jnr%2bP96swHi63ITbeJH6foGB4YldiIOahzeNFHhepTo%3d&risl=&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="http://vietlandmarks.com/module/groups/action/view/id/1458/album/0" target="_blank">vietlandmarks.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Hầm bí mật<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/oCtisQg8yLTPy9n3A" target="_blank">6/64 khu phố Dãy Ốc, 1500 Đường 30 Tháng 4, Vĩnh Hiệp, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử cách mạng<br>
+    <figure>
+      <img src="https://i.ytimg.com/vi/95T_X6kQFVI/maxresdefault.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.youtube.com/watch?v=95T_X6kQFVI" target="_blank">youtube.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Khmer Sóc Xoài<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/xmw9gbuEi1U2n5GF6" target="_blank">42G6+4RG, Thị trấn Sóc Sơn, Hòn Đất, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.QagLHvAzdLRThOKpySHgEAHaFj?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="http://www.phatgiaonamtongkhmer.org/kien-giang--chua-soc-xoai-trang-nghiem-to-chuc-le-khanh-thanh-ngoi-chanh-dien,-sala,-truong-hoc-va-cac-hang-muc-khac-a-50908.aspx" target="_blank">phatgiaonamtongkhmer.org</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Nền Chùa<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/Aa7tvYcmPDHaHSFv7" target="_blank">4465+V3W, Mỹ Phước, Hòn Đất, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích khảo cổ<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.7ac40a7462810c289437095f624de590?rik=8INVdyHYvq%2fTfA&riu=http%3a%2f%2fkhaocohoc.gov.vn%2fsites%2fdefault%2ffiles%2f2020%2f12%2ftintuc%2fnen_chua.jpg&ehk=77b85k6vloLN%2fBZZackwF9OTdDk4YvZ2kSDA%2b4qeXGU%3d&risl=&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="http://khaocohoc.gov.vn/nhan-thuc-moi-ve-khu-di-tich-nen-chua-tinh-kien-giang-qua-ket-qua-khai-quat-va-nghien-cuu-nam-2018" target="_blank">khaocohoc.gov.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đền thờ Quốc tổ Hùng Vương<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/cvminbzVUgeXyz9AA" target="_blank">Đông Thạnh, Tân Hiệp, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://i.ytimg.com/vi/Vvkt5_hJhHM/maxresdefault.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.youtube.com/watch?v=Vvkt5_hJhHM" target="_blank">youtube.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình thần Phú Hội<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/dHEwb1UqzbWq6vZs6" target="_blank">444X+RRG, Tân Hội, Tân Hiệp, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://i.ytimg.com/vi/sRHpNEoKaeM/maxresdefault.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.youtube.com/watch?v=sRHpNEoKaeM" target="_blank">youtube.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Khmer Tổng Quản<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/B84KZCEbtbZCiGbHA" target="_blank">R5CP+GX2, Thới Quản, Gò Quao, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích kiến trúc nghệ thuật<br>
+    <figure>
+      <img src="https://i.ytimg.com/vi/P0dONeieERk/maxresdefault.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.youtube.com/watch?v=P0dONeieERk" target="_blank">youtube.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình thần Vĩnh Tuy<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/yohBUwrPvSmuKsbV9" target="_blank">J996+MQG, Ấp Long Đời, Vĩnh Tuy, Gò Quao, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.4db45ef39266577479c99e9a88d4de37?rik=HwmcBg8olm2EIQ&riu=http%3a%2f%2fvietlandmarks.com%2fupload%2f1363687461514838254219b.jpg&ehk=v2sat5bwdqsyUEAHp86p8vq2bkT3iJ7uVEo9NpyPq9w%3d&risl=&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="http://vietlandmarks.com/module/groups/action/view/id/692" target="_blank">vietlandmarks.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình thần Hòn Chông<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/KKzNUMyunVAyLBGK6" target="_blank">5J67+7C5, Bình An, Kiên Lương, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://photo.znews.vn/Uploaded/qxjwpprjv/2023_03_07/sacthan_zing_8_.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://znews.vn/sac-phong-106-nam-tuoi-cua-trieu-nguyen-tai-dinh-than-o-mien-tay-post1409525.html" target="_blank">znews.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Lăng Ông Nam Hải Đại Tướng Quân<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/c9dySGEsTW8owryq5" target="_blank">612 Lâm Quang Ky, P. An Hoà, Rạch Giá, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2024/lang_ong_nam_hai.png" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://luhanhvietnam.com.vn/du-lich/lang-ong-nam-hai-dia-diem-tam-linh-thu-hut-du-khach-o-hon-son.html" target="_blank">luhanhvietnam.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Nhà tù Hà Tiên<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/c3mSq9Zn6qnP3aUY8" target="_blank">9FPQ+HP7, Đường Mạc Công Du, Bình San, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://visuhahotel.com/wp-content/uploads/sites/16/2021/11/nha-tu-ha-tien.png" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://visuhahotel.com/2021/11/25/nha-tu-tram-tuoi-khet-tieng-ha-tien/" target="_blank">visuhahotel.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Phù Dung<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/46HGnnjeuzAzgaCg8" target="_blank">9FQM+C42, Phù Dung, Bình San, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.jwIJnByXWGprysJA0BkimAHaEp?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://thamhiemmekong.com/thong-tin-du-lich-mien-tay/chua-phu-dung-chua-phu-cu-ha-tien-kien-giang.html" target="_blank">thamhiemmekong.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Tam Bảo<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/K4qNieDAwov77zp79" target="_blank">9FPP+3J8, Bình San, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://kientrucsuvietnam.vn/wp-content/uploads/2016/03/chua-tam-bao-01.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://kientrucsuvietnam.vn/kien-truc-doc-dao-cua-chua-tam-bao-ha-tien/" target="_blank">kientrucsuvietnam.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình thần Thành Hoàng<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/s6Md11sLJK5diiSk9" target="_blank">9FJQ+QWG, Trần Hầu, Kiên Lương, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://taucaotoc.vn/wp-content/uploads/2020/11/Dinh-than-Thanh-Hoang-Ha-Tien-1536x1152.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình thần Nguyễn Hữu Cảnh<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/qkx1bwFLjZSVRLxV8" target="_blank">GPF2+J39, Ấp Cống Cả, Giang Thành, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://th.bing.com/th/id/R.a12cdd5eedfe79027a9b2c2748c3578a?rik=UNni6l%2frxYq%2frg&pid=ImgRaw&r=0" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://thixasadec.blogspot.com/2012/12/inh-chau-phu-thi-xa-chau-oc-tinh-giang.html" target="_blank">thixasadec.blogspot.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Nhà tù Phú Quốc<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/guvoT52b9hNJ3ERY8" target="_blank">350 Đ. Nguyễn Văn Cừ, An Thới, Phú Quốc, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử<br>
+    <figure>
+      <img src="https://ik.imagekit.io/tvlk/blog/2023/05/nha-tu-phu-quoc-1.jpg?tr=dpr-2.5" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.traveloka.com/vi-vn/explore/destination/nha-tu-phu-quoc-acc-2/227765" target="_blank">traveloka.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Đình Nam Thái<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/6YD6vePgBfKJokTq7" target="_blank">RXGR+MMP, Nam Thái, An Biên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.tUI8DoXm2SAQc9hy9yYUXgHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.facebook.com/p/Di-t%C3%ADch-%C4%91%C3%ACnh-nam-th%C3%A1i-an-bi%C3%AAn-ki%C3%AAn-giang-100080011557911/" target="_blank">facebook.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Chùa Khmer Xẻo Cạn (Wát-Sđây-Woong-Sa)<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/DvKjBhRmuDkMuk7m7" target="_blank">P588+W2W, Thạnh Yên, U Minh Thượng, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử - văn hóa<br>
+    <figure>
+      <img src="https://cdn.tgdd.vn/Files/2023/11/21/1555594/bo-tui-3-dia-diem-du-lich-u-minh-thuong-kien-giang-dang-trai-nghiem-202311212318211552.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/bo-tui-3-dia-diem-du-lich-u-minh-thuong-kien-giang-dang-trai-nghiem-1555594" target="_blank">bachhoaxanh.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Khu Di Tích Lịch Sử An Ninh Khu 9<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/dZhA7JmZiTRhSxWa8" target="_blank">P337+7WX, An Minh Bắc, U Minh Thượng, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử cách mạng<br>
+    <figure>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.sF4cpA3kbTLHyUvxbhlEpQHaD4?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://hoinhabao.camau.gov.vn/dat-nuoc-nhip-song-hom-nay/khu-di-tich-lich-su-an-ninh-khu-ix-200458" target="_blank">hoinhabao.camau.gov.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Dinh Cậu<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/A84QrKbk56RNzrPJ7" target="_blank">Khu phố 2, Phú Quốc, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích danh lam thắng cảnh<br>
+    <figure>
+      <img src="https://vinaphuquoc.com/storage/photos/shares/Blog/dinh-cau/dinh-cau-6.webp" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://vinaphuquoc.com/dinh-cau-phu-quoc-p27" target="_blank">vinaphuquoc.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Núi Mo So<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/TRsrUqxb8JHWmCbs8" target="_blank">6JG9+X3F, Kiên Lương, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích lịch sử và thắng cảnh<br>
+    <figure>
+      <img src="https://images.vietnamtourism.gov.vn/vn/images/2024/thang_8/2308.kiengiang.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://vietnamtourism.gov.vn/post/58151" target="_blank">vietnamtourism.gov.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Mũi Nai<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/gW1nhsyt9A7V8piQ7" target="_blank">9CPW+RFV, Pháo Đài, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích thắng cảnh<br>
+    <figure>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.-tkwKSE-InSwAVWj3h0b0QHaFj?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://dulichhatien.com.vn/7b89334fA5H55aB" target="_blank">dulichhatien.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Thạch Động<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/uCgsx924EU96Eqni8" target="_blank">CF6G+82G, QL80, Mỹ Đức, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích thắng cảnh<br>
+    <figure>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.OxFQafsHJGeWdy6VnS5SPwHaEw?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://vuahoachat.com/kham-pha-khu-du-lich-thach-dong-vien-ngoc-an-giua-long-ha-tien/" target="_blank">vuahoachat.com</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Núi Bình San<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/bkb4HGjknj68ehVZ7" target="_blank">9FQJ+49C, Mạc Công Nương, Bình San, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích thắng cảnh<br>
+    <figure>
+      <img src="https://congdankhuyenhoc.qltns.mediacdn.vn/449484899827462144/2023/11/9/nui-binh-san-3-169950927085440557039.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://congdankhuyenhoc.vn/toan-canh-di-tich-nui-binh-san-lang-mo-mac-cuu-va-khu-mo-co-o-ha-tien-179231109132604492.htm" target="_blank">congdankhuyenhoc.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li> Núi Đá Dựng<br>
+    -Địa điểm: <a href="https://maps.app.goo.gl/4MVFZC5d1ZRovyYs6" target="_blank">CFHG+2GW, Mỹ Đức, Hà Tiên, Kiên Giang, Vietnam</a><br>
+    -Loại di tích: Di tích thắng cảnh<br>
+    <figure>
+      <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/02_2022/nui-da-dung-ha-tien-bon.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://taucaotoc.vn/danh-muc-di-tich-da-xep-hang-cua-tinh-kien-giang" target="_blank">taucaotoc.vn</a> | <a href="https://luhanhvietnam.com.vn/du-lich/kham-pha-nui-da-dung-ha-tien-hung-vi.html" target="_blank">luhanhvietnam.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+</ol>
+</details>
+<details>
+      <summary class="w3-bar-item w3-button w3-padding" style="font-size:large;">-Ngoài ra còn có các di sản văn hoá phi vật thể như:</summary>
+<ol style="list-style-type: decimal;">
+  <li>-Tri thức và kỹ thuật viết chữ trên lá buông<br>
+    -Loại hình: Nghệ thuật thủ công<br>
+    <figure>
+      <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/5/11/base64-1683787868272138364613.png" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://danviet.vn/bao-ton-va-phat-huy-gia-tri-di-san-van-hoa-phi-vat-the-kinh-la-buong-cua-nguoi-khmer-nam-bo-20230511134725685-d1093049.html" target="_blank">danviet.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li>-Nghệ thuật trình diễn sân khấu Dù Kê<br>
+    -Loại hình: Nghệ thuật biểu diễn dân gian<br>
+    <figure>
+      <img src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/6/26/base64-16877814300171788543899.png" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://danviet.vn/gap-go-gia-dinh-co-6-the-he-theo-nghe-mua-khmer-o-soc-trang-20230626151820587-d1102460.html" target="_blank">danviet.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li>-Nghệ thuật đàn hát Chầm riêng Chà pây<br>
+    -Loại hình: Nghệ thuật âm nhạc truyền thống<br>
+    <figure>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.XmLBkd_wUQfmoyeCUL4FSQAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin: <a href="https://dantri.com.vn/van-hoa/nghe-nhan-cuoi-cung-giu-gin-di-san-cham-rieng-cha-pay-1392941074.htm" target="_blank">dantri.com.vn</a>)</figcaption>
+    </figure>
+  </li>
+
+  <li>-Nghệ thuật diễn tấu trống Chhay-dăm<br>
+    -Loại hình: Nghệ thuật âm nhạc dân gian<br>
+    <figure>
+      <img src="https://i.ex-cdn.com/danviet.vn/files/content/2025/07/17/213633trong-chhay-dam-cua-nguoi-khmer-tai-vung-bay-nui-an-giang-11-2115.jpg" class="w3-container" alt="">
+      <figcaption style="font-size: 15px" class="w3-animate-left">(nguồn thông tin và hình ảnh: <a href="https://danviet.vn/doc-dao-nghe-thuat-dien-tau-trong-chhay-dam-cua-nguoi-khmer-o-an-giang-d1348477.html" target="_blank">danviet.vn</a>)</figcaption>
+    </figure>
+  </li>
+</ol>
+      </details>
+    </article>   
+    </section>
+    <hr>
+     <section class="w3-row w3-padding-16 " id="GIAODUC" >
+      <h1 class="w3-center" style="font-size: 50px;">GIÁO DỤC</h1>
+      <article>
+        <p>-Trường Đại học An Giang là một trường đại học đa ngành, thành viên của Đại học Quốc gia Thành phố Hồ Chí Minh tại An Giang, được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam, có vai trò nòng cốt trong hệ thống giáo dục tại Việt Nam. Trường được thành lập theo Quyết định 241/1999/QĐ-TTg ngày 30/12/1999 trên cơ sở Trường Cao đẳng Sư phạm An Giang.
+<br>
+-Ngoài đào tạo, trường còn có nhiệm vụ nghiên cứu, ứng dụng và chuyển giao công nghệ cho doanh nghiệp và Chính phủ.</p>
+      </article>
+    <figure class="w3-center">
+<img style="display:block; margin:auto;" src="https://tse4.mm.bing.net/th/id/OIP.63sjhea2zxbedH3q5myAugHaFa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w3-container" alt=""> <br>
+<figcaption class="w3-center" style="font-size: 15px">(nguồn thông tin và hình ảnh: <a href="https://www.agu.edu.vn/vi/gioi-thieu/tong-quan-ve-truong-dai-hoc-an-giang">agu.edu.vn</a> <br> <a href="https://vi.wikipedia.org/wiki/An_Giang#Gi%C3%A1o_d%E1%BB%A5c">wiki An Giang</a> )</figcaption>
+    </figure>
+</section>
+    <hr>
+    <section class="w3-row w3-padding-16" id="KINHTE">
+            <br>
+          <h1 class="w3-center" style="font-size: 50px;">KINH TẾ</h1>
+      <article>
+  <h2 style="text-align: left;">TÓM TẮT PHÁT TRIỂN KINH TẾ AN GIANG</h2>
+  <p>
+    <b>• Truyền thống kinh tế:</b>  
+    An Giang là tỉnh có truyền thống kinh tế lâu đời, cư dân chủ yếu sinh sống
+    bằng nông nghiệp, đặc biệt là trồng lúa, đánh bắt cá, tôm và các nghề thủ công
+    truyền thống như dệt lụa, mộc, đan lát, gốm và khai thác đá. An Giang là địa
+    phương đứng đầu cả nước về sản lượng lúa với trên 2 triệu tấn mỗi năm, bên
+    cạnh đó còn trồng bắp, đậu nành và phát triển mạnh nuôi trồng thủy sản.
+  </p>
+  <p>
+    <b>• Nghề thủ công truyền thống:</b>  
+    Nghề trồng dâu, nuôi tằm, ươm tơ và dệt lụa phát triển mạnh ở Tân Châu và
+    Chợ Mới. Lụa Tân Châu từng rất nổi tiếng vào đầu thế kỷ XX nhờ độ bền và tính
+    thẩm mỹ cao. Ở vùng Bảy Núi và Châu Giang (Châu Đốc), đồng bào Khmer và Chăm
+    duy trì nghề dệt thổ cẩm với các sản phẩm như xà rông, khăn choàng, trang phục
+    truyền thống nhiều màu sắc. Nghề mộc ở Chợ Mới, đặc biệt là thợ mộc Chợ Thủ,
+    nổi tiếng trong toàn vùng Đồng bằng sông Cửu Long. Ngoài ra, nghề khai thác
+    và chế tác đá ở núi Sam, núi Sập cũng phát triển để phục vụ nhu cầu xây dựng
+    và sinh hoạt.
+  </p>
+  <p>
+    <b>• Vai trò của cây lúa:</b>  
+    Mặc dù các nghề thủ công phát triển, cây lúa vẫn là nền tảng kinh tế chính
+    của người dân An Giang. Trước điều kiện lũ lụt hằng năm, người dân đã sáng
+    tạo ra phương thức canh tác lúa nổi – loại lúa có thể vươn cao theo mực nước,
+    trở thành biểu tượng cho sức sống và khả năng thích nghi của cư dân vùng
+    sông nước.
+  </p>
+  <p>
+    <b>• Kinh tế – xã hội:</b>  
+    Năm 2018, An Giang có 1.908.352 người, trong đó 947.570 nam và 960.782 nữ,
+    mật độ dân số khoảng 612 người/km². Tỷ lệ dân số từ 15 tuổi trở lên biết đọc,
+    biết viết đạt 91,6%. Tổng sản phẩm trên địa bàn (GRDP) đạt 74.297 tỷ đồng
+    (tương đương 3,23 tỷ USD), GRDP bình quân đầu người đạt 34,33 triệu đồng/năm
+    (khoảng 1.491 USD), tốc độ tăng trưởng GRDP đạt 6,52%.
+  </p>
+  <p>
+    <b>• Phát triển và hạ tầng:</b>  
+    An Giang có nền kinh tế phát triển khá ổn định, từng đạt tốc độ tăng trưởng
+    GDP 13,36% vào năm 2007. Kim ngạch xuất khẩu năm 2007 đạt khoảng 540 triệu USD,
+    chiếm 13% tổng kim ngạch xuất khẩu của vùng Đồng bằng sông Cửu Long. Tỉnh có
+    hệ thống giao thông thuận lợi với Quốc lộ 91, các tuyến sông lớn như sông Tiền,
+    sông Hậu, sông Vàm Nao cùng hệ thống bến phà và cảng. Cơ sở hạ tầng, giáo dục,
+    y tế và các dự án nông nghiệp, công nghiệp chế biến, du lịch sinh thái được
+    đầu tư, góp phần thúc đẩy phát triển kinh tế bền vững cho tỉnh An Giang.
+  </p>
+</article>
+
+          <h2 style="text-align: center;">Biểu đồ GRDP An Giang 1997–2024</h2>
+<p style="text-align:center;">
+  Đơn vị: nghìn tỷ đồng (giá hiện hành) / %
+</p>
+<figure style="width: 80%; margin: auto;" class="chart-container">
+  <canvas id="grdpChart"></canvas>
+  <figcaption class="w3-center" style="font-size: 15px">(nguồn thông tin: <a href="https://baotintuc.vn/dia-phuong/kinh-te-an-giang-van-tang-truong-bat-chap-covid19-20201207165714855.htm,">baotintuc.vn</a> <br>
+<a href="https://app.angiang.gov.vn/sites/default/files/angiang/2025-01/Thong%20ke%20bao%20cao%20ktxh%20thang%2012%20va%20nam%202024-1.pdf?">angiang.gov.vn</a> )</figcaption>
+</figure>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('grdpChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['1997', '2007', '2018','2020','2021','2022','2023','2024'],
+    datasets: [
+      {
+        label: 'GRDP An Giang (nghìn tỷ đồng)',
+        data: [2.02, 13548, 74297, 19418, 18795, 19504, 22134, 26289],
+        backgroundColor: '#4CAF50',
+        yAxisID: 'y'
+      },
+      {
+        label: 'Tăng trưởng GRDP (%)',
+        data: [null, 13.36, 6.52, 5.45, 2.15, 6.87, 7.34, 7.16],
+        backgroundColor: '#FF9800',
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        position: 'left',
+        title: {
+          display: true,
+          text: 'GRDP (nghìn tỷ đồng)'
+        }
+      },
+      y1: {
+        beginAtZero: true,
+        position: 'right',
+        grid: {
+          drawOnChartArea: false
+        },
+        title: {
+          display: true,
+          text: 'Tăng trưởng (%)'
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Năm'
+        }
+      }
+    }
+  }
+});
+</script>
+</section>
+      <hr>
+         <section class="w3-row w3-padding-16" id="AMTHUC">
+          <h1 class="w3-center" style="font-size: 50px;">ẨM THỰC</h1>
+          <h2>-An Giang có rất nhiều đặc sản nổi tiếng có thể kể đến như:</h2>
+<ol style="list-style-type: decimal;">
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Bún cá Châu Đốc</summary>
+      <p>
+        -Bún cá Châu Đốc là đặc sản An Giang nổi bật bởi hương vị tinh tế và cách chế biến cầu kỳ. Nước lèo được ninh từ xương gà hoặc heo, hòa quyện cùng mắm ruốc đậm đà và ngải bún giã nhuyễn với nghệ tươi, tạo nên vị thơm nhẹ và khử mùi tanh hiệu quả. Bún cá ăn kèm nhiều loại rau như: bông điên điển, giá, bắp chuối sợi, rau muống bào, rau răm… chấm cùng nước mắm chua cay, mặn ngọt đậm đà.<br>
+        -Giá tham khảo: 35.000 VNĐ / tô<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/kxDCe775MJgaQ8oW6" target="_blank">185 Trưng Nữ Vương, Châu Phú B, Châu Đốc, An Giang 90000, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/bun-ca-chau-doc.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Lẩu mắm</summary>
+      <p>
+        -Lẩu mắm An Giang chinh phục thực khách bởi hương vị phong phú, mặn mà và lôi cuốn. Nước lẩu được nấu từ mắm cá sặc, cá chốt – hai loại mắm đặc trưng cho vị ngọt thanh và mùi hương hấp dẫn. Thành phần lẩu mắm còn có cá basa, cá kèo, cá bông lau, thịt ba rọi, tôm, mực cùng cà tím, khổ qua, nấm rơm… Rau ăn kèm vô cùng đa dạng như: bông so đũa, điên điển, bông súng, bắp chuối, rau đắng, bông bí và bún tươi.<br>
+        -Giá tham khảo: 180.000 – 280.000 VNĐ / nồi (tùy khẩu phần và quán)<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/NsfPQPABEfx4RHqS6" target="_blank">9CQP+XJ Long Xuyen, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/lau-mam-an-giang.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Cơm tấm Long Xuyên</summary>
+      <p>
+        -Cơm tấm Long Xuyên là đặc sản An Giang nổi tiếng nhờ hương vị hài hòa, hấp dẫn thực khách ngay từ lần đầu thưởng thức. Không giống với những nơi khác, cơm tấm Long Xuyên mềm nhuyễn, kết hợp cùng sườn nướng, trứng kho cắt nhỏ, hòa quyện cùng mỡ hành béo thơm và dưa chua thanh mát. Món ăn càng trọn vị hơn với nước mắm sánh kẹo, chua ngọt đậm đà, mang đến trải nghiệm ẩm thực đặc sắc, rất riêng của Long Xuyên.<br>
+        -Giá tham khảo: 30.000 – 40.000 VNĐ / dĩa<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/NLwzHLMLgQcAnCCu6" target="_blank">34 Phan Chu Trinh, Mỹ Long, Thành phố Long Xuyên, An Giang 90106, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/com-tam-long-xuyen.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Xôi phồng Chợ Mới</summary>
+      <p>
+        -Xôi phồng Chợ Mới An Giang là món đặc sản vô cùng độc đáo, gây ấn tượng từ cách làm đến hương vị. Hạt nếp Chợ Mới dẻo thơm kết hợp đậu xanh được quết nhuyễn, thêm dầu để tạo độ bóng dẻo, rồi chiên khéo léo trên lửa vừa để xôi phồng tròn vàng óng như quả bóng. Khi cắt ra, xôi giòn ngoài, dẻo thơm bên trong, có thể ăn riêng hoặc kết hợp cùng gà luộc, gà quay chấm nước tương truyền thống.<br>
+        -Giá tham khảo: 25.000 – 35.000 VNĐ / phần nhỏ<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/i2AWPMBfePULhziF9" target="_blank">Tỉnh Lộ 942/152/5 1, Ấp Long Hòa, Chợ Mới, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/xoi-phong-cho-moi.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Cá lóc nướng trui</summary>
+      <p>
+        -Cá lóc nướng trui là món đặc sản Châu Đốc An Giang dân dã, hấp dẫn từ cách chế biến độc đáo đến hương vị thơm lừng. Cá lóc đồng tươi được nướng nguyên con trong rơm khô, giúp giữ trọn vị ngọt tự nhiên. Khi chín, thịt cá trắng, mềm, ăn kèm bánh tráng, bún tươi, rau sống và nước chấm chua ngọt tạo nên hương vị khó quên.<br>
+        -Giá tham khảo: 100.000 – 150.000 VNĐ / con (tùy kích cỡ cá và quán)<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/tc84x93k7reLb5Wt6" target="_blank">152 Trưng Nữ Vương, Châu Phú B, Châu Đốc, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/ca-loc-nuong-trui.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Bánh bò thốt nốt</summary>
+      <p>
+        -Bánh bò thốt nốt là đặc sản An Giang nổi tiếng, được làm khéo léo để giữ được độ mềm xốp đặc trưng mà không bị vỡ, khô hay cứng. Màu vàng ươm bắt mắt từ đường thốt nốt quyện cùng vị béo bùi của nước cốt dừa tạo nên sự hài hòa tuyệt vời. Khi ăn, thực khách có thể cảm nhận rõ vị ngọt thanh, béo ngậy và độ dai giòn nhẹ, tất cả hòa quyện thành hương vị mộc mạc mà tinh tế.<br>
+        -Giá tham khảo: 45.000 VNĐ / phần<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/AyAR2R2dsrwgPkLe7" target="_blank">122 Lê Lợi, Phường Trần Phú, Bắc Giang, Việt Nam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/banh-bo-thot-not-an-giang.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Bánh xèo núi Cấm</summary>
+      <p>
+        -Bánh xèo – đặc sản núi Cấm An Giang chinh phục thực khách bởi hương vị dân dã mà đặc biệt. Bánh được làm từ gạo ngâm xay nhuyễn nên bột mịn, vỏ chiên vàng giòn thơm, nhân đậm đà với thịt ba rọi, giá, tép, củ hũ dừa hoặc măng. Khi ăn, thực khách cuốn bánh với đủ loại rau rừng tươi non hái trên núi Cấm như: lá cách, lá lốt, lá xoài, lá cóc, tía tô, quế vị… Nước chấm chua ngọt điểm sợi củ cải, cà rốt bào và ớt cay nhẹ càng làm cho món bánh xèo núi Cấm thêm hấp dẫn.<br>
+        -Giá tham khảo: 5.000 – 25.000 VNĐ / chiếc<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/2XcMLTGJXW2WQ6Yk7" target="_blank">Ấp Tân Long, Tịnh Biên, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/banh-xeo-nui-cam.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Thốt nốt</summary>
+      <p>
+        -Thốt nốt là đặc sản An Giang gắn liền với nhiều món ngon vùng Bảy Núi. Thốt nốt tươi có vị ngọt thanh, mềm mát, hơi giống dừa nhưng dễ ăn và giải nhiệt hơn. Du khách có thể chọn mua thốt nốt ngâm sẵn trong hũ làm quà, bảo quản được đến một năm. Ngoài ra, đường thốt nốt cũng là lựa chọn hấp dẫn khi có thể dùng để nấu ăn, làm bánh.<br>
+        -Giá tham khảo:<br>
+        Đường thốt nốt: ~40.000 – 70.000 VNĐ/kg tùy loại.<br>
+        Bánh bò thốt nốt: ~45.000 VNĐ/ổ bánh vừa ăn.<br>
+        Mứt thốt nốt: ~50.000 – 100.000 VNĐ/hộp.<br>
+        Rượu thốt nốt: ~150.000 – 250.000 VNĐ/chai (500ml–700ml).<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/UeQJZ9Cx6Ae7TSQBA" target="_blank">ĐT948, TT. Tri Tôn, Tri Tôn, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/thot-not-an-giang.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Mắm Châu Đốc</summary>
+      <p>
+        -Châu Đốc được mệnh danh là "vương quốc mắm" của miền Tây nhờ nguồn cá tự nhiên dồi dào từ ngã ba sông Hậu. Đến đây, du khách dễ dàng tìm thấy đủ loại mắm hấp dẫn như mắm cá linh, cá lóc, cá trèn, ba khía, cá sặc… đặc biệt là mắm Thái nổi tiếng. Mắm Châu Đốc có vị mặn ngọt đậm đà, thường dùng để ăn cùng cơm trắng hoặc kho, nấu lẩu.<br>
+        -Giá tham khảo:<br>
+        Mắm cá linh / cá sặc tươi: ~150.000 – 250.000 VNĐ/kg.<br>
+        Mắm đã đóng gói sẵn: ~120.000 – 200.000 VNĐ/500g đến 1kg.<br>
+        Mắm cá lóc nêm sẵn / mắm chấm: ~70.000 – 150.000 VNĐ/hũ 300g–500g.<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/PTFTJve5bH83iofr6" target="_blank">Cổng chào KDL Núi Sam - Tổ 19 - Vĩnh Đông 2, Châu Đốc, An Giang 90000, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/mam-chau-doc.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Tung lò mò</summary>
+      <p>
+        -Tung lò mò hay lạp xưởng bò là món đặc sản nổi tiếng của người Chăm ở An Giang. Món ăn được chế biến từ thịt bò tươi trộn với cơm nguội cùng các gia vị truyền thống, sau đó nhồi vào ruột và phơi nắng cho lên men tự nhiên, tạo nên hương vị đặc trưng khó nhầm lẫn. Tung lò mò có thể được nướng hoặc chiên, mang vị chua nhẹ, đậm đà và béo thơm của thịt bò. Ăn kèm rau sống, tương ớt càng thêm hấp dẫn.<br>
+        -Giá tham khảo: 150.000 – 250.000 VNĐ/500g<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/7vfQWr6g6wEXhW9aA" target="_blank">P49J+WQG, ĐT953, Châu Phong, An Phú, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/tung-lo-mo-chau-doc.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Mây gai</summary>
+      <p>
+        -Quả mây gai là đặc sản Châu Đốc An Giang được nhiều du khách tìm mua về làm quà vì hương vị thơm ngon, lạ miệng và dễ dàng mang đi. Loại quả này được bao phủ bởi lớp gai nhỏ, vỏ có màu cam và chuyển dần sang đen khi chín, bên trong có 2 – 3 múi nhỏ. Vị quả mây gai ngọt chua hài hòa, vừa dễ ăn vừa mang mùi thơm thoang thoảng của mít, xen lẫn chút dư vị quả dại núi rừng.<br>
+        -Giá tham khảo: 30.000 – 60.000 VNĐ/kg (tùy mùa, nơi bán).<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/k7xELEzCXw62yz5i6" target="_blank">GX3J+XQ4, Đường lên đỉnh Núi Cấm, An Hảo, Tịnh Biên, An Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/qua-may-gai.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Cà xỉu</summary>
+      <p>
+        -Cà xỉu là một trong những món đặc sản có 1-0-2 ở vùng Hà Tiên, Kiên Giang. Món ăn này ban đầu nhìn có vẻ giống món châu chấu xào của miền Bắc, tuy nhiên thực chất đây là một loại hải sản nước mặn chỉ có ở Kiên Giang. Con cà xỉu sẽ được đánh bắt ngay trong ngày, sơ chế thật sạch và mang đi xào cùng muối, tỏi và nhiều loại gia vị khác. Khi thưởng thức, bạn chỉ cần tách lớp vỏ bên ngoài, chỉ ăn phần thịt ngon ngọt bên trong.<br>
+        -Giá tham khảo: 100.000 – 150.000 VNĐ/hũ 500g – 1kg.<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/4dAE63go5AvWHAEW7" target="_blank">Hà Tiên, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/ca-xiu-ngam-toi-ot-ha-tien.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Gỏi cá trích</summary>
+      <p>
+        -Gỏi cá trích chắc hẳn là cái tên không còn xa lạ với nhiều thực khách khi đến với Kiên Giang. Món gỏi thơm ngon, dân dã cực nịnh miệng với 1 lớp bánh tráng cuốn, rau sống, cá trích được thái mỏng sau đó cuộn thật chặt và chấm cùng nước mắm đặc biệt chuẩn vị khiến bất cứ du khách nào cũng khó có thể chối từ.<br>
+        -Giá tham khảo: 80.000 – 150.000 VNĐ/suất<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/KmGHsT7dVEH6dsJ2A" target="_blank">QLN1, ấp Rạch Núi, Hà Tiên, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/dac-san-kien-giang-5.png" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Bánh canh ghẹ chả</summary>
+      <p>
+        -Bánh canh ghẹ chả là món đặc sản siêu ngon ở Kiên Giang với các nguyên liệu gồm ghẹ, chả cá, tôm, đầu cá thu. Điểm nhấn của món ăn chính là phần nước lèo được nấu cùng tôm khô, thịt xương heo có hương vị thanh ngọt khó quên. Mỗi nguyên liệu trong tô bánh canh đều được chọn lọc và chế biến kỹ càng nên tô bánh canh càng thêm thơm ngon, đậm đà.<br>
+        -Giá tham khảo: 60.000 – 120.000 VNĐ/suất<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/Ms96wsNySbVGxP6c7" target="_blank">Khu Phố 6/Tổ 6 Đường Cáp Treo, Phú Quốc, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/dac-san-kien-giang-7.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Bún cá</summary>
+      <p>
+        -Bún cá Kiên Giang được chế biến từ cá lóc đồng quê được đánh bắt ở những con sông, suối nhỏ. Cá mang về sẽ được sơ chế thật sạch, chia thành từng khúc nhỏ và ướp cùng gia vị sau đó mang đi hấp chín. Phần nước dùng được chế biến có vị chua nhẹ, thanh mát, thêm các nguyên liệu như tôm, rau sống, giá đỗ, hoa chuối, rau răm ăn kèm và không thể thiếu tô nước chấm chuẩn vị.<br>
+        -Giá tham khảo: 30.000 – 60.000 VNĐ/suất.<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/7gVpeDHAfZsFoCyU6" target="_blank">Khu lấn biển, 9 Bùi Văn Ba, Phường Vĩnh Bảo, Rạch Giá, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/bun-ca-dac-san-kien-giang.jpg" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Cơm ghẹ Phú Quốc</summary>
+      <p>
+        -Cơm ghẹ Phú Quốc được biết tới là một loại đặc sản không nên bỏ qua trong chuyến du lịch đảo ngọc. Cơm sẽ được chiên cùng ghẹ đã được làm sẵn, thêm hành tây, tương cà để màu sắc thêm bắt mắt. Khi thưởng thức sẽ có thêm 1 tô nước lèo, dưa leo, nước mắm tỏi ớt.<br>
+        -Giá tham khảo: 100.000 – 200.000 VNĐ/suất<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/sna2hmeRVgGQGXzm8" target="_blank">66 Đường Trần Hưng Đạo, Dương Đông, Phú Quốc, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/dac-san-kien-giang-12.png" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Nước mắm Phú Quốc</summary>
+      <p>
+        -Nước mắm Phú Quốc là một trong những quà tặng nổi tiếng mà bạn không nên bỏ lỡ khi đến với Kiên Giang. Nước mắm sẽ được sản xuất khá kỳ công với nhiều công đoạn chặt chẽ trong những nhà thùng nước mắm Phú Quốc. Thành phẩm mỗi chai nước mắm có độ đạm cao, màu sắc đậm đà, hương vị thơm ngon.<br>
+        -Giá tham khảo:<br>
+        Chai 200ml – 250ml: ~80.000 – 120.000 VNĐ.<br>
+        Chai 500ml – 1 lít: ~150.000 – 400.000 VNĐ.<br>
+        Nước mắm nhĩ cao cấp: từ ~600.000 – 1.000.000 VNĐ/lít.<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/Hsfarttj13Xpi4Rq6" target="_blank">6X9G+C4P, Đường 30, khu phố 1, Phú Quốc, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/dac-san-kien-giang-19.png" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Mắm ruốc Phú Quốc</summary>
+      <p>
+        -Mắm ruốc Phú Quốc là một trong những loại đặc sản rất quen thuộc với những người ngư dân ở Kiên Giang. Mắm ruốc Phú Quốc được chế biến từ ruốc biển tươi mới đánh bắt ngay trong ngày. Loại mắm này du khách có thể sử dụng để nêm nếm gia vị, chấm các loại trái cây, món luộc cũng cực kỳ hấp dẫn.<br>
+        -Giá tham khảo:<br>
+        Hũ nhỏ (200–250g): ~60.000 – 100.000 VNĐ.<br>
+        Hũ lớn (500g – 1kg): ~120.000 – 250.000 VNĐ.<br>
+        -Địa chỉ thưởng thức:
+        <a href="https://maps.app.goo.gl/vCewqrZFiYTEngho9" target="_blank">30 Đ. 30 Tháng 4, Dương Đông, Phú Quốc, Kiên Giang, Vietnam</a><br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/dac-san-kien-giang-20.png" class="w3-container" width="max-width:400px" alt=""><br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/dac-san-an-giang-13-mon-an-10-dac-san-lam-qua-noi-tieng/" target="_blank">vinwonders.com</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+</ol>
+ </section>
+      <hr>
+        <section class="w3-row w3-padding-16" id="DULICH">
+          <h1 class="w3-center" style="font-size: 50px;">DU LỊCH</h1>
+          <h2>-An Giang có những điểm du lịch nổi tiếng như:</h2>
+<ol type="1">
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding summary">Miếu Bà Chúa Xứ Núi Sam </summary>
+      <p class="detail-content">-Miếu Bà Chúa Xứ Núi Sam là địa danh linh thiêng và nổi tiếng bậc nhất An Giang, thu hút hàng triệu lượt khách hành hương mỗi năm. Nằm dưới chân núi Sam, miếu được xây dựng với kiến trúc uy nghi, mang đậm nét Á Đông và gắn liền với tín ngưỡng thờ Mẫu của người dân Nam Bộ. Đến Miếu Bà trong chuyến du lịch An Giang, du khách có thể chiêm bái, cầu an, thưởng lãm kiến trúc độc đáo và tham gia lễ hội Vía Bà Chúa Xứ vào ngày 22 – 27/4 Âm lịch hàng năm.
+        <br> -Địa điểm: <br> <a href="https://maps.app.goo.gl/PvdDgGCXTMarP8bJ6"> 925 Phạm Văn Bạch Khóm, Vĩnh Tây 1, Châu Đốc, An Giang, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/vieng-chua-ba-chau-doc-1.jpg" class="w3-container" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Chợ nổi Long Xuyên</summary>
+      <p>
+        -Nằm trên dòng sông Hậu hiền hòa, chợ nổi Long Xuyên là địa điểm du lịch An Giang hấp dẫn khi mang đậm văn hóa sông nước miền Tây. Phiên chợ bắt đầu nhộn nhịp từ khoảng 5 giờ sáng, khi hàng trăm ghe thuyền tụ họp buôn bán đủ loại nông sản, trái cây, đồ ăn sáng. Không quá tấp nập như chợ nổi Cái Răng, nơi đây vẫn giữ được vẻ mộc mạc, bình dị và chân thật của người dân miền sông nước. Du khách đến chợ nổi Long Xuyên có thể hòa mình vào nhịp sống chậm rãi, thưởng thức ẩm thực và cảm nhận trọn vẹn hồn quê Nam Bộ. <br> -Địa điểm: <br> <a href="https://maps.app.goo.gl/WvmqnMTZhT4FNoi48">9CMV+GV Long Xuyen, An Giang, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/cho-noi-long-xuyen.jpg" class="w3-container" alt=""> <br>
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Hồ Tà Pạ</summary>
+      <p>
+        Nằm yên bình dưới chân núi Cô Tô của vùng Tri Tôn, An Giang, hồ Tà Pạ được ví như “tuyệt tình cốc” của miền Tây khi có sắc nước thay đổi kỳ ảo, lúc xanh ngọc bích, khi xanh lục sâu thẳm. Hồ được hình thành sau quá trình khai thác đá, nay trở thành điểm check-in lý tưởng nhờ làn nước trong vắt cùng khung cảnh núi non hùng vĩ bao quanh. Vẻ đẹp hoang sơ, tĩnh lặng và lãng mạn của hồ Tà Pạ khiến bất kỳ ai đặt chân đến cũng phải say lòng.
+        <br> -Địa điểm: <br> <a href="https://maps.app.goo.gl/7GksPjA8G5o4KvrLA">Núi Tô, Tri Tôn, An Giang, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/ho-ta-pa-an-giang.jpg" class="w3-container" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Thánh đường Masjid Al Ehsan
+      </summary>
+      <p>
+        Thánh đường Masjid Al Ehsan là một trong những điểm du lịch An Giang độc đáo, thu hút đông đảo du khách đến tham quan, chiêm ngưỡng kiến trúc Hồi giáo. Nằm giữa làng Chăm, thánh đường nổi bật với thiết kế mang đậm phong cách Trung Đông, mái vòm bo tròn và chóp nhọn vươn cao, gợi nhớ đến những công trình trong “xứ Nghìn lẻ một đêm”. Đây không chỉ là nơi hành lễ thiêng liêng của cộng đồng người Chăm, mà còn là “tọa độ check-in triệu view” nhờ vẻ đẹp uy nghi, huyền ảo.
+        <br> -Địa điểm: <br> <a href="https://maps.app.goo.gl/EodKNajMEHQXFxix6">P4FF+RVC, ĐT956, Đa Phước, An Phú, An Giang, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/thanh-duong-masjid-al-ehsan.jpeg" class="w3-container" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Núi Cấm</summary>
+      <p>
+        -Núi Cấm hay còn gọi Thiên Cấm Sơn có độ cao hơn 700m, được mệnh danh là “nóc nhà miền Tây”, quanh năm mát mẻ và được bao phủ bởi rừng cây xanh mướt cùng muôn loài hoa đua nở. Du khách đến khu du lịch Lâm Viên Núi Cấm sẽ được chiêm ngưỡng khung cảnh hùng vĩ, tận hưởng không gian thanh tĩnh và làn sương bảng lảng quanh triền núi. Đây cũng là nơi có nhiều công trình tâm linh nổi bật như: tượng Phật Di Lặc khổng lồ, chùa Vạn Linh, chùa Phật Lớn, tạo nên sức hút đặc biệt cho du lịch An Giang.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/5CErA33H4hLkBUsV9">Tịnh Biên, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/nui-cam-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Khu du lịch sinh thái Cồn Én</summary>
+      <p>
+        -Khu du lịch sinh thái Cồn Én nằm ở Cù Lao Giêng, Chợ Mới được ví như “thiên đường xanh” giữa lòng châu thổ, với khung cảnh sông nước mênh mang, cây trái sum suê và bầu không khí trong lành. Khu du lịch An Giang này nổi bật với hệ thống trò chơi phong phú cả dưới nước lẫn trên cạn như: cầu lắc, zipline, chèo SUP, chèo thuyền… mang đến những trải nghiệm vui nhộn, sảng khoái cho du khách. Ngoài ra, những căn tum gỗ nhỏ nối nhau bằng cầu gỗ duyên dáng tạo nên không gian thư giãn, lý tưởng để check-in và tận hưởng trọn vẹn vẻ đẹp miền Tây sông nước.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/sR7fTdSdSeWS2caF9">Ấp Tấn Long, Tân Long, Chợ Mới, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/khu-du-lich-con-en-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Hồ Ô Thum</summary>
+      <p>
+        -Hồ Ô Thum nằm ở vùng Tri Tôn là hồ nhân tạo nổi tiếng with không gian mát mẻ và khung cảnh hữu tình, được ví như “tuyệt tình cốc” của miền Tây. Mặt nước phẳng lặng soi bóng hàng thốt nốt, bầu trời xanh trong và bãi cỏ ven hồ tạo nên bức tranh thiên nhiên nên thơ, yên bình. Du khách có thể thuê thuyền hoặc bè để dạo quanh hồ, vừa thư giãn vừa tận hưởng không khí trong lành. Đặc biệt, địa điểm du lịch An Giang này nổi tiếng với món gà đốt lá chúc có hương thơm đặc trưng, thịt săn chắc, đậm vị, gây thương nhớ cho biết bao thực khách.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/UkLTKqCNGumZmiK2A">9XFG+F5P, Hồ Thum, Ô, Tri Tôn, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/cheo-thuyen-ho-o-thum-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Chùa Tây An</summary>
+      <p>
+        -Chùa Tây An hay Tây An cổ tự nằm gần Miếu Bà Chúa Xứ Núi Sam là ngôi chùa Phật giáo nổi tiếng của An Giang. Ngôi chùa được xây theo lối chữ “tam”, kết hợp phong cách kiến trúc Ấn Độ, Hồi giáo và chùa cổ Nam Bộ, tạo nên vẻ đẹp độc đáo, hài hòa. Chùa gắn liền với truyền thuyết về Phật Thầy Tây An (Đoàn Minh Huyên), người sáng lập giáo phái Bửu Sơn Kỳ Hương hơn 150 năm trước. Đây không chỉ là nơi chiêm bái linh thiêng mà còn là di tích văn hóa, lịch sử thu hút đông đảo du khách và Phật tử.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/gMPqvGydeRtEffs98">Đường Đ. Vòng Núi Sam, P. Núi Sam, Châu Đốc, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/chua-tay-an-chau-doc-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Chùa Hang (Phước Điền Tự)</summary>
+      <p>
+        -Phước Điền Tự – chùa Hang là một trong bốn di tích văn hóa – lịch sử nổi tiếng của núi Sam, An Giang. Nằm trên triền núi cao, ngôi chùa hơn trăm năm tuổi này mang vẻ đẹp linh thiêng giữa thiên nhiên hữu tình với rừng cây xanh thẳm và không khí trong lành. Từ chùa, du khách có thể phóng tầm mắt ngắm toàn cảnh vùng đồng bằng thơ mộng phía dưới để cảm nhận vẻ đẹp hài hòa giữa thiên nhiên và kiến trúc cổ kính nơi miền sơn cước.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/5ciapJ4kMK2owRGV9">P. Núi Sam, Chau Doc, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/phuoc-dien-tu-chua-hang-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Làng người Chăm Châu Giang</summary>
+      <p>
+        -Du lịch An Giang nên đi đâu? Tham quan làng người Chăm Châu Giang là gợi ý hấp dẫn mà bạn có thể cân nhắc. Làng là nơi lưu giữ những nét văn hóa đặc trưng của cộng đồng người Chăm theo đạo Hồi. Du khách đến đây có thể tham quan các thánh đường Hồi giáo với kiến trúc độc đáo, chiêm ngưỡng những ngôi nhà sàn truyền thống và tìm hiểu phong tục, tập quán đặc sắc. Ngoài ra, bạn đừng quên thưởng thức ẩm thực địa phương hấp dẫn như: cà ri dê, bánh hổng, bánh tét lá dứa.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/89muttgcyLpWTNyx6">P4FF+VW3 TT, Đa Phước, An Phú, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/lang-nguoi-cham-chau-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Nhà mồ Ba Chúc</summary>
+      <p>
+        -Nhà mồ Ba Chúc ở Tri Tôn, An Giang là di tích lịch sử đặc biệt, ghi dấu tội ác diệt chủng của quân Pôn Pốt năm 1978. Trong 12 ngày đêm, hơn 3.000 thường dân vô tội đã bị sát hại, trong đó 1.159 bộ hài cốt hiện được lưu giữ tại khu nhà mồ. Công trình có kiến trúc hình bông sen trắng tám cánh úp ngược – biểu tượng cho nỗi đau thương, mất mát của người dân Ba Chúc. Bên trong, xương cốt được sắp xếp theo độ tuổi và giới tính là minh chứng bi thương về một thời kỳ tang thương trong lịch sử dân tộc, đồng thời nhắc nhở thế hệ sau về giá trị của hòa bình.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/yzupCiBEqmWgPS3Z8">An Định, Tri Tôn, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/nha-mo-ba-chuc-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Lăng Thoại Ngọc Hầu</summary>
+      <p>
+        -Lăng Thoại Ngọc Hầu (hay Sơn Lăng) nằm đối diện miếu Bà Chúa Xứ núi Sam là công trình kiến trúc cổ tiêu biểu dưới triều Nguyễn, được công nhận là di tích lịch sử Quốc gia năm 1997. Lăng được xây dựng trên nền đá xanh vững chắc, tựa lưng vào núi Sam, mang vẻ đẹp uy nghi, cổ kính. Đây là nơi an nghỉ của danh thần Thoại Ngọc Hầu – người có công lớn trong việc khai hoang, lập làng và đào hai con kênh nổi tiếng Thoại Hà và Vĩnh Tế, góp phần mở mang vùng đất An Giang và bảo vệ biên cương Tây Nam của Tổ quốc.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/mfPfrN51xfmPwSmU8">M3JH+QJP, P. Núi Sam, Châu Đốc, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/lang-thoai-ngoc-hau.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Chùa Huỳnh Đạo</summary>
+      <p>
+        -Chùa Huỳnh Đạo tọa lạc ở Châu Đốc là một trong những ngôi chùa An Giang nổi tiếng. Ngôi chùa gây ấn tượng bởi kiến trúc độc đáo, không gian rộng lớn và cảnh quan hài hòa giữa hồ nước, cây xanh, cùng tượng rồng uốn lượn uy nghi. Chùa Huỳnh Đạo vì thế không chỉ là nơi chiêm bái linh thiêng mà còn là địa điểm du lịch An Giang hấp dẫn, thu hút đông đảo du khách và Phật tử tìm đến để cầu an, chụp ảnh và tìm sự bình yên trong tâm hồn.
+        <br> -Địa điểm: <br>
+        <a href="https://maps.app.goo.gl/yShprTSBBjS15vuc8">Quốc lộ 91 Tân Lộ Kiều Lương, Vĩnh Đông 2, Châu Đốc, An Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/production/2025/10/chua-huynh-dao-an-giang.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding"> Rừng quốc gia U Minh Thượng</summary>
+      <p>
+        -Rừng quốc gia U Minh Thượng rộng hơn 21.000ha và nằm trong khu dự trữ sinh quyển của thế giới... <br> -Địa điểm:
+        <a href="https://maps.app.goo.gl/j6893NS8cySYNKqAA">J36W+MXJ, Ấp Công Sự, An Minh Bắc, U Minh Thượng, Kiên Giang, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/du-lich-kien-giang-15.jpg" class="w3-container" style="max-width:400px" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-kien-giang-top-15-dia-diem-khong-the-bo-lo/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-kien-giang-top-15-dia-diem-khong-the-bo-lo/</a>)</figcaption>
+        </figure>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary class="w3-bar-item w3-button w3-padding">Phú Quốc – hòn đảo thiên đường</summary>
+      <p>
+        -Phú Quốc là điểm đến hấp dẫn và nổi tiếng bậc nhất trong hành trình du lịch Kiên Giang...
+        <br> -VinWonders Phú Quốc: <br>
+        <a href="https://maps.app.goo.gl/f8aPquf9ehbtBwxt6">Khu Bãi Dài, Phu Quoc, Kien Giang 92512, Vietnam</a> <br>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/du-lich-kien-giang-02.jpg" class="w3-container" style="max-width:400px" alt="">
+        </figure>
+        <br>
+      <p>
+        -Vinpearl Safari Phú Quốc: <br>
+        <a href="https://maps.app.goo.gl/2fZpumf4DLADJLea7">Bãi Dài, Gành Dầu, Phú Quốc, Kiên Giang 922200, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://static.vinwonders.com/2022/04/du-lich-kien-giang-03.jpg" class="w3-container" alt="">
+        </figure>
+        <br>
+      <p>
+        -Làng chài Rạch Vẹm: <br>
+        <a href="https://maps.app.goo.gl/dDuH5RTJWZCU9w8m7">9W8M+373, Rạch Vẹm, Phú Quốc, Kiên Giang, Vietnam</a>
+      </p>
+        <figure>
+          <img src="https://www.tourdulichbentre.com/images/gia-ve-lang-chai-rach-bem.jpg" class="w3-container" alt="">
+          <figcaption style="font-size: smaller;">(Nguồn hình ảnh: <a href="https://www.tourdulichbentre.com/du-lich-lang-chai-rach-vem-phu-quoc-2019" target="_blank">https://www.tourdulichbentre.com/du-lich-lang-chai-rach-vem-phu-quoc-2019</a>)</figcaption>
+        </figure>
+      <br>
+      <p>
+        -Chùa Hộ Quốc: <br>
+        <a href="https://maps.app.goo.gl/hBQPzwdaietinBan9">426H+GVQ, Dương Tơ, Phú Quốc, Kiên Giang, Vietnam</a>
+      </p>
+      <figure>
+        <img src="https://static.vinwonders.com/production/Chua-Ho-Quoc-Phu-Quoc.jpg" alt="">
+      </figure>
+      <br>
+      <p>
+        -Chợ đêm Phú Quốc: <br>
+        <a href="https://maps.app.goo.gl/SjQXjbTRBzwUBZHB9">54 Đường Nguyễn Trãi, Khu 1, Phú Quốc, Kiên Giang, Vietnam</a>
+      </p>
+      <figure>
+        <img src="https://static.vinwonders.com/2022/04/du-lich-kien-giang-08.jpg" alt="">
+        <figcaption style="font-size: smaller;">(Nguồn thông tin và hình ảnh trên: <a href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/" target="_blank">https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a>)</figcaption>
+      </figure>
+    </details>
+  </li>
+</ol>
+ </section>
+<hr>
+<script>// Lấy tất cả thẻ p
+const paragraphs = document.querySelectorAll('summary');
+// Thêm class 'my-paragraph' cho tất cả
+paragraphs.forEach(p => p.classList.add('ccc'));
+</script>
+       <section class="w3-row w3-padding-16" id="tiemnang">
+         <h1 class="w3-center" style="font-size: 50px;">TIỀM NĂNG PHÁT TRIỂN</h1>
+
+<article style="font-size: 20px; line-height: 1.7;">
+  <p>
+    <b>• Vị trí & vai trò chiến lược:</b>  
+    An Giang nằm ở cửa ngõ Tây Nam vùng ĐBSCL, có lợi thế kết nối giao thương
+    đường bộ và đường thủy, đặc biệt với Campuchia và tiểu vùng sông Mekong.
+  </p>
+
+  <p>
+    <b>• Định hướng phát triển rõ ràng:</b>  
+    Phát triển theo Quy hoạch tỉnh thời kỳ 2021–2030, tầm nhìn đến 2050; gắn với
+    Chiến lược phát triển kinh tế – xã hội 10 năm và giai đoạn 2026–2030.
+  </p>
+
+  <p><b>• Lĩnh vực ưu tiên thu hút đầu tư:</b></p>
+  <ul>
+    <li>Dịch vụ – du lịch (du lịch văn hóa, tâm linh, sinh thái).</li>
+    <li>Nông nghiệp và nông nghiệp ứng dụng công nghệ cao.</li>
+    <li>Công nghiệp chế biến nông sản, thủy sản (gạo, cá tra…).</li>
+    <li>Hạ tầng giao thông, đô thị, khu – cụm công nghiệp.</li>
+    <li>Logistics, cảng sông phục vụ vận chuyển hàng hóa quy mô lớn.</li>
+  </ul>
+
+  <p><b>• Lợi thế cạnh tranh:</b></p>
+  <ul>
+    <li>Nguồn tài nguyên nông nghiệp phong phú, sản phẩm OCOP đa dạng.</li>
+    <li>Quỹ đất và định hướng tạo quỹ đất sạch cho nhà đầu tư.</li>
+    <li>Chính sách ưu đãi đầu tư, môi trường đầu tư ngày càng cải thiện.</li>
+  </ul>
+
+  <p>
+    <b>• Hạ tầng & liên kết:</b>  
+    Tập trung đầu tư hệ thống giao thông, logistics, cảng sông nhằm nâng cao
+    năng lực kết nối vùng và thu hút các nhà đầu tư lớn trong và ngoài nước.
+  </p>
+
+  <p><b>• Cam kết của chính quyền:</b></p>
+  <ul>
+    <li>Đồng hành cùng doanh nghiệp, đảm bảo cơ sở pháp lý khi trao quyết định đầu tư.</li>
+    <li>Tăng cường xúc tiến đầu tư, kết nối với nhà đầu tư chiến lược và tổ chức quốc tế.</li>
+    <li>Minh bạch thông tin quy hoạch, danh mục dự án trọng điểm.</li>
+  </ul>
+  <p>
+    👉 <b>Tổng thể</b>, An Giang đang nổi lên là điểm đến đầu tư tiềm năng của ĐBSCL
+    với định hướng phát triển bền vững, hạ tầng từng bước hoàn thiện và quyết tâm
+    cao của chính quyền trong thu hút và hỗ trợ nhà đầu tư.
+  </p>
+  <p style="font-size: 15px" class="w3-center">
+    (Nguồn thông tin: 
+    <a href="https://angiang.gov.vn/vi/danh-thuc-tiem-nang-phat-trien-giang" target="_blank">
+      angiang.gov.vn
+    </a>)
+  </p>
+</article>
+
+</section>
+ <hr>
+ </main>
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>hết!</p>
+</footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("w3-hide");
+}
+</script>
+</body>
+</html>
