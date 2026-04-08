@@ -43,6 +43,7 @@
   <label for="menu-toggle" class="menu-icon ">☰</label>
   <ul style="   background: linear-gradient(180deg, #ff9800, #ff5722); color: #fffaf0;" class="menu w3-right w3-button" id="menu-list">
     <li><a href="#about">LỊCH SỬ HÌNH THÀNH</a></li>
+    <a href="#THOITIET" class="w3-bar-item w3-button">DỰ BÁO THỜI TIẾT TRONG TỈNH</a>
     <li><a href="#menu">ĐỊA LÝ</a></li>
     <li><a href="#khihau">KHÍ HẬU</a></li>
     <li><a href="#DIEUKIENTUNHIEN">ĐIỀU KIỆN TỰ NHIÊN</a></li>
@@ -70,6 +71,7 @@
    <nav style="background: linear-gradient(180deg, #ff9800, #ff5722);color: #fff3cd;" class="w3-animate-left w3-hide-small   neon-box">
    <div class="menu-scroll">
     <a href="#about" class="w3-bar-item w3-button">LỊCH SỬ HÌNH THÀNH</a>
+    <a href="#THOITIET" class="w3-bar-item w3-button">DỰ BÁO THỜI TIẾT TRONG TỈNH</a>
     <a href="#menu" class="w3-bar-item w3-button">ĐỊA LÝ</a>
     <a href="#DIEUKIENTUNHIEN" class="w3-bar-item w3-button">ĐIỀU KIỆN TỰ NHIÊN</a>
     <a href="#khihau" class="w3-bar-item w3-button">KHÍ HẬU</a>
@@ -111,6 +113,166 @@ btnLeft.addEventListener('click', () => {
         <figcaption style="font-size: 15px">(nguồn hình ảnh: <a href="https://thiennhienmoitruong.vn/phe-duyet-quy-hoach-tinh-an-giang-thoi-ky-2021-2030-tam-nhin-2050.html">thiennhienmoitruong.vn</a> )</figcaption>
       </figure>
     </section>
+  <hr>
+    <section class="w3-row-padding w3-padding-16 " id="menu">
+      <h1 class="w3-padding-16"  style="color: red ;font-size: 50px;">DỰ BÁO THỜI TIẾT TRONG TỈNH</h1>
+<section id="THOITIET" style="padding:40px 16px;background:#f5f9f6;">
+<div style="max-width:760px;margin:0 auto;font-family:'Montserrat',Arial,sans-serif;">
+
+  <h2 class="section-title" style="text-align:center;color:#0a3d2e;margin-bottom:6px;">
+    🌤 Dự Báo Thời Tiết
+  </h2>
+  <p style="text-align:center;color:#666;font-size:14px;margin-bottom:20px;">
+    Gõ tên xã / phường / thị trấn để xem dự báo thời tiết
+  </p>
+
+  <div style="position:relative;max-width:440px;margin:0 auto 22px;">
+    <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);
+          font-size:17px;pointer-events:none;">🔍</span>
+    <input type="text" id="tt-input"
+      placeholder="Gõ tên xã, phường, thị trấn..."
+      oninput="ttFilter()" onfocus="ttShow()" autocomplete="off"
+      style="width:100%;padding:13px 14px 13px 42px;font-size:15px;border-radius:10px;
+             border:2px solid #0a3d2e;color:#333;background:#fff;
+             font-family:inherit;outline:none;box-sizing:border-box;"
+    />
+    <div id="tt-drop"
+      style="display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;
+             background:#fff;border:2px solid #0a3d2e;border-radius:10px;
+             max-height:250px;overflow-y:auto;z-index:9999;
+             box-shadow:0 8px 24px rgba(0,0,0,0.13);">
+    </div>
+  </div>
+
+  <div id="tt-box" style="display:none;border-radius:14px;overflow:hidden;
+       box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+    <div style="background:#0a3d2e;color:#fff;padding:12px 20px;
+                font-size:15px;font-weight:600;">
+      📍 Thời tiết: <span id="tt-name"></span>
+    </div>
+    <div id="tt-widget-wrap" style="background:#fff;"></div>
+    <div id="tt-noembed" style="display:none;padding:24px;text-align:center;background:#fff;">
+      <p style="color:#888;font-size:14px;">
+        ⚙️ Khu vực này chưa có mã widget.<br>
+        Vào <a href="https://thoitiet.vn/widget" target="_blank"
+          style="color:#0a3d2e;">thoitiet.vn/widget</a> để tạo và dán vào.
+      </p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<script>
+var TT_AREAS = [
+  { name: "Huyện Châu Thành", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/woqpupduxgk?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Chợ Mới", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/pjvmtkbugqa?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Phú Tân", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/bpylhrzuvxy?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Châu Phú", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/ylrdiapulmz?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "huyện Tri Tôn", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/kdyzukluxvq?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện An Phú", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/gywgflguzxv?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "thị xã Tịnh Biên", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/ajplugdujwm?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Thị xã Tân Châu", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/xbzztqruwqo?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Thành phố Long Xuyên", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/vopgfypubzd?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Thành phố Châu Đốc", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/jdzbiakujaz?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "huyện Thoại Sơn", parent: "Tỉnh An Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/qjoyhywuaxk?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+
+  { name: "Thành phố Rạch Giá", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/zpakhkluoyk?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Thành phố Hà Tiên", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/rdjqspyuvol?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Thành phố Phú Quốc", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/ylkdhapulmz?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện An Biên", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/gylgclguzxv?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện An Minh", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/xbyzfqruwqo?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Châu Thành", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/ovjkixquzkp?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Giang Thành	", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/wodptpduxgk?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Giồng Riềng", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/vorgcypubzd?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Gò Quao", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/jdjbhakujaz?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Hòn Đất", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/mrxlcpguvkp?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Kiên Hải", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/ajoltgdujwm?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Kiên Lương", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/davkfrouayq?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Tân Hiệp", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/lxjxtwrubyp?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện U Minh Thượng", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/kdjztkluxvq?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+  { name: "Huyện Vĩnh Thuận	", parent: "Tỉnh Kiên Giang cũ", widget: `<!--Begin thoitiet.vn Weather Widget --><iframe src="https://thoitiet.vn/embed/bpllurzuvxy?days=4&hC=%23ffffff&hB=%23FF0000&tC=%23848484&bC=%23FF0000&lC=%23dddddd" id="widgeturl" width="100%" height="380" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End Widget -->` },
+];
+function ttNorm(s) {
+  return s.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .replace(/đ/g,"d");
+}
+
+var ttFiltered = TT_AREAS.slice();
+
+function ttFilter() {
+  var q = ttNorm(document.getElementById('tt-input').value.trim());
+  ttFiltered = q
+    ? TT_AREAS.filter(function(a){ return ttNorm(a.name).indexOf(q) !== -1; })
+    : TT_AREAS.slice();
+  ttRender();
+  document.getElementById('tt-drop').style.display = 'block';
+}
+
+function ttShow() {
+  ttFiltered = TT_AREAS.slice();
+  ttRender();
+  document.getElementById('tt-drop').style.display = 'block';
+}
+
+function ttRender() {
+  var dd = document.getElementById('tt-drop');
+  if (!ttFiltered.length) {
+    dd.innerHTML = '<div style="padding:14px 18px;color:#999;font-size:14px;">Không tìm thấy</div>';
+    return;
+  }
+  dd.innerHTML = ttFiltered.map(function(a) {
+    var idx = TT_AREAS.indexOf(a);
+    var dot = a.widget.trim()
+      ? '<span style="color:#27ae60;font-size:10px;margin-left:6px;" title="Đã có widget">●</span>'
+      : '<span style="color:#ccc;font-size:10px;margin-left:6px;" title="Chưa có widget">●</span>';
+    return '<div onclick="ttSelect(' + idx + ')"'
+      + ' style="padding:11px 18px;font-size:14px;cursor:pointer;'
+      + 'border-bottom:1px solid #f5f5f5;display:flex;align-items:center;"'
+      + ' onmouseover="this.style.background=\'#f0f7f4\'"'
+      + ' onmouseout="this.style.background=\'#fff\'">'
+      + '<span style="color:#0a3d2e;font-weight:600;">' + a.name + '</span>'
+      + dot + '</div>';
+  }).join('');
+}
+
+function ttSelect(idx) {
+  var a = TT_AREAS[idx];
+  document.getElementById('tt-input').value = a.name;
+  document.getElementById('tt-drop').style.display = 'none';
+  var locationTitle = a.name;
+  if (a.parent) {
+    locationTitle += " (" + a.parent + ")";
+  }
+  
+  document.getElementById('tt-name').textContent = locationTitle;
+  document.getElementById('tt-box').style.display = 'block';
+
+  var wrap = document.getElementById('tt-widget-wrap');
+  var noEmbed = document.getElementById('tt-noembed');
+
+  if (a.widget && a.widget.trim()) {
+    wrap.innerHTML = a.widget;
+    wrap.style.display = 'block';
+    noEmbed.style.display = 'none';
+  } else {
+    wrap.innerHTML = '';
+    wrap.style.display = 'none';
+    noEmbed.style.display = 'block';
+  }
+
+  document.getElementById('tt-box').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+document.addEventListener('click', function(e) {
+  var inp  = document.getElementById('tt-input');
+  var drop = document.getElementById('tt-drop');
+  if (drop && e.target !== inp && !drop.contains(e.target))
+    drop.style.display = 'none';
+});
+</script>
+  </section>
   <hr>
   <section class="w3-row-padding w3-padding-16 " id="menu">
       <h1 class="w3-padding-16"  style="color: red ;font-size: 50px;">ĐỊA LÝ</h1>
@@ -1681,9 +1843,8 @@ new Chart(ctx, {
 </ol>
  </section>
 <hr>
-<script>// Lấy tất cả thẻ p
+<script>
 const paragraphs = document.querySelectorAll('summary');
-// Thêm class 'my-paragraph' cho tất cả
 paragraphs.forEach(p => p.classList.add('ccc'));
 </script>
        <section class="w3-row w3-padding-16" id="tiemnang">
