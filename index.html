@@ -82,17 +82,6 @@
             >
           </li>
         </ul>
-        <script>
-          const menuLinks = document.querySelectorAll("#menu-list a");
-          const menuToggle = document.getElementById("menu-toggle");
-          menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-              if (window.innerWidth <= 768) {
-                menuToggle.checked = false;
-              }
-            });
-          });
-        </script>
         <nav
           style="
             background: linear-gradient(180deg, #ff9800, #ff5722);
@@ -136,18 +125,6 @@
         </nav>
       </nav>
     </header>
-    <script>
-      const menuScroll = document.querySelector(".menu-scroll");
-      const btnLeft = document.querySelector(".left-btn");
-      const btnRight = document.querySelector(".right-btn");
-      const step = 200;
-      btnRight.addEventListener("click", () => {
-        menuScroll.scrollLeft += step;
-      });
-      btnLeft.addEventListener("click", () => {
-        menuScroll.scrollLeft -= step;
-      });
-    </script>
     <main class="w3-content" style="max-width: 1100px">
       <section class="w3-row w3-padding-16 w3-center" id="about">
         <h1 class="w3-center" style="color: red; font-size: 35px">
@@ -197,7 +174,6 @@
         </figure>
       </section>
       <hr />
-
       <section class="w3-row-padding w3-padding-16" id="menu">
         <h1 class="w3-padding-16" style="color: red; font-size: 50px">
           ĐỊA LÝ
@@ -597,7 +573,6 @@
           >
             Gõ tên xã / phường / thị trấn để xem dự báo thời tiết
           </p>
-
           <div
             style="position: relative; max-width: 440px; margin: 0 auto 22px"
           >
@@ -650,7 +625,6 @@
               "
             ></div>
           </div>
-
           <div
             id="tt-box"
             style="
@@ -687,7 +661,6 @@
             </div>
           </div>
         </div>
-
         <script>
           var TT_AREAS = [
             {
@@ -745,7 +718,6 @@
               parent: "Tỉnh An Giang cũ",
               widget: `<iframe src="https://thoitiet247.vn/widget/embed/an-giang/thoai-son?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe>`,
             },
-
             {
               name: "Thành phố Rạch Giá",
               parent: "Tỉnh Kiên Giang cũ",
@@ -829,9 +801,7 @@
               .replace(/[\u0300-\u036f]/g, "")
               .replace(/đ/g, "d");
           }
-
           var ttFiltered = TT_AREAS.slice();
-
           function ttFilter() {
             var q = ttNorm(document.getElementById("tt-input").value.trim());
             ttFiltered = q
@@ -842,13 +812,11 @@
             ttRender();
             document.getElementById("tt-drop").style.display = "block";
           }
-
           function ttShow() {
             ttFiltered = TT_AREAS.slice();
             ttRender();
             document.getElementById("tt-drop").style.display = "block";
           }
-
           function ttRender() {
             var dd = document.getElementById("tt-drop");
             if (!ttFiltered.length) {
@@ -879,7 +847,6 @@
               })
               .join("");
           }
-
           function ttSelect(idx) {
             var a = TT_AREAS[idx];
             document.getElementById("tt-input").value = a.name;
@@ -888,13 +855,10 @@
             if (a.parent) {
               locationTitle += " (" + a.parent + ")";
             }
-
             document.getElementById("tt-name").textContent = locationTitle;
             document.getElementById("tt-box").style.display = "block";
-
             var wrap = document.getElementById("tt-widget-wrap");
             var noEmbed = document.getElementById("tt-noembed");
-
             if (a.widget && a.widget.trim()) {
               wrap.innerHTML = a.widget;
               wrap.style.display = "block";
@@ -904,18 +868,35 @@
               wrap.style.display = "none";
               noEmbed.style.display = "block";
             }
-
             document.getElementById("tt-box").scrollIntoView({
               behavior: "smooth",
               block: "start",
             });
           }
-
           document.addEventListener("click", function (e) {
             var inp = document.getElementById("tt-input");
             var drop = document.getElementById("tt-drop");
             if (drop && e.target !== inp && !drop.contains(e.target))
               drop.style.display = "none";
+          });
+          const menuScroll = document.querySelector(".menu-scroll");
+          const btnLeft = document.querySelector(".left-btn");
+          const btnRight = document.querySelector(".right-btn");
+          const step = 200;
+          btnRight.addEventListener("click", () => {
+            menuScroll.scrollLeft += step;
+          });
+          btnLeft.addEventListener("click", () => {
+            menuScroll.scrollLeft -= step;
+          });
+          const menuLinks = document.querySelectorAll("#menu-list a");
+          const menuToggle = document.getElementById("menu-toggle");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 768) {
+                menuToggle.checked = false;
+              }
+            });
           });
         </script>
       </section>
@@ -1079,7 +1060,6 @@
             lớn nhất vùng Đồng bằng sông Cửu Long, đồng thời bảo tồn và phát huy
             các giá trị văn hóa truyền thống đặc sắc.
           </p>
-
           <details>
             <summary
               class="w3-bar-item w3-button w3-padding"
@@ -1412,7 +1392,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Lăng Thoại Ngọc Hầu<br />
                 -Địa điểm:
@@ -1444,7 +1423,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Tây An<br />
                 -Địa điểm:
@@ -1477,7 +1455,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Hang<br />
                 -Địa điểm:
@@ -1509,7 +1486,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Nhà mồ Ba Chúc<br />
                 -Địa điểm:
@@ -1541,7 +1517,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đồi Tức Dụp<br />
                 -Địa điểm:
@@ -1573,7 +1548,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Châu Phú<br />
                 -Địa điểm:
@@ -1606,7 +1580,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Ông Bắc<br />
                 -Địa điểm:
@@ -1639,7 +1612,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Giồng Thành<br />
                 -Địa điểm:
@@ -1671,7 +1643,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Nguyễn Trung Trực<br />
                 -Địa điểm:
@@ -1704,7 +1675,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Vĩnh Hòa<br />
                 -Địa điểm:
@@ -1737,7 +1707,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đền thờ Quản Cơ Trần Văn Thành<br />
                 -Địa điểm:
@@ -1769,7 +1738,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Quan Đế<br />
                 -Địa điểm:
@@ -1802,7 +1770,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Láng Cát<br />
                 -Địa điểm:
@@ -1834,7 +1801,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Phật Lớn<br />
                 -Địa điểm:
@@ -1866,7 +1832,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Tam Bửu<br />
                 -Địa điểm:
@@ -1898,7 +1863,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Phi Lai<br />
                 -Địa điểm:
@@ -1930,7 +1894,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Xvayton<br />
                 -Địa điểm:
@@ -1962,7 +1925,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Thánh Đường Hồi Giáo Mubarak<br />
                 -Địa điểm:
@@ -1994,7 +1956,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Hòa Thạnh<br />
                 -Địa điểm:
@@ -2021,7 +1982,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Mỹ Phước<br />
                 -Địa điểm:
@@ -2054,7 +2014,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Đa Phước<br />
                 -Địa điểm:
@@ -2086,7 +2045,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Căn cứ cách mạng Ô Tà Sóc<br />
                 -Địa điểm:
@@ -2118,7 +2076,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Nam Linh Sơn Tự<br />
                 -Địa điểm:
@@ -2150,7 +2107,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Gò Cây Thị<br />
                 -Địa điểm:
@@ -2182,7 +2138,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Mộ Hội Đồng Suông<br />
                 -Địa điểm:
@@ -2214,7 +2169,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Hầm bí mật<br />
                 -Địa điểm:
@@ -2247,7 +2201,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Khmer Sóc Xoài<br />
                 -Địa điểm:
@@ -2279,7 +2232,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Nền Chùa<br />
                 -Địa điểm:
@@ -2311,7 +2263,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đền thờ Quốc tổ Hùng Vương<br />
                 -Địa điểm:
@@ -2343,7 +2294,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình thần Phú Hội<br />
                 -Địa điểm:
@@ -2375,7 +2325,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Khmer Tổng Quản<br />
                 -Địa điểm:
@@ -2407,7 +2356,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình thần Vĩnh Tuy<br />
                 -Địa điểm:
@@ -2440,7 +2388,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình thần Hòn Chông<br />
                 -Địa điểm:
@@ -2472,7 +2419,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Lăng Ông Nam Hải Đại Tướng Quân<br />
                 -Địa điểm:
@@ -2504,7 +2450,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Nhà tù Hà Tiên<br />
                 -Địa điểm:
@@ -2537,7 +2482,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Phù Dung<br />
                 -Địa điểm:
@@ -2569,7 +2513,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Tam Bảo<br />
                 -Địa điểm:
@@ -2601,7 +2544,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình thần Thành Hoàng<br />
                 -Địa điểm:
@@ -2627,7 +2569,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình thần Nguyễn Hữu Cảnh<br />
                 -Địa điểm:
@@ -2659,7 +2600,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Nhà tù Phú Quốc<br />
                 -Địa điểm:
@@ -2692,7 +2632,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Đình Nam Thái<br />
                 -Địa điểm:
@@ -2724,7 +2663,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Chùa Khmer Xẻo Cạn (Wát-Sđây-Woong-Sa)<br />
                 -Địa điểm:
@@ -2756,7 +2694,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Khu Di Tích Lịch Sử An Ninh Khu 9<br />
                 -Địa điểm:
@@ -2788,7 +2725,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Dinh Cậu<br />
                 -Địa điểm:
@@ -2820,7 +2756,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Núi Mo So<br />
                 -Địa điểm:
@@ -2852,7 +2787,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Mũi Nai<br />
                 -Địa điểm:
@@ -2884,7 +2818,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Thạch Động<br />
                 -Địa điểm:
@@ -2916,7 +2849,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Núi Bình San<br />
                 -Địa điểm:
@@ -2949,7 +2881,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 Núi Đá Dựng<br />
                 -Địa điểm:
@@ -3010,7 +2941,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 -Nghệ thuật trình diễn sân khấu Dù Kê<br />
                 -Loại hình: Nghệ thuật biểu diễn dân gian<br />
@@ -3030,7 +2960,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 -Nghệ thuật đàn hát Chầm riêng Chà pây<br />
                 -Loại hình: Nghệ thuật âm nhạc truyền thống<br />
@@ -3050,7 +2979,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li>
                 -Nghệ thuật diễn tấu trống Chhay-dăm<br />
                 -Loại hình: Nghệ thuật âm nhạc dân gian<br />
@@ -3168,7 +3096,6 @@
             tư, góp phần thúc đẩy phát triển kinh tế bền vững cho tỉnh An Giang.
           </p>
         </article>
-
         <h2 style="text-align: center">Biểu đồ GRDP An Giang 1997–2024</h2>
         <p style="text-align: center">
           Đơn vị: nghìn tỷ đồng (giá hiện hành) / %
@@ -3298,7 +3225,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3339,7 +3265,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3380,7 +3305,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3421,7 +3345,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3462,7 +3385,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3501,7 +3423,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3542,7 +3463,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3585,7 +3505,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3629,7 +3548,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3669,7 +3587,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3709,7 +3626,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">Cà xỉu</summary>
@@ -3747,7 +3663,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3785,7 +3700,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3825,7 +3739,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">Bún cá</summary>
@@ -3863,7 +3776,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3902,7 +3814,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3944,7 +3855,6 @@
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4023,13 +3933,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4062,13 +3971,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4099,13 +4007,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4137,13 +4044,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4176,13 +4082,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4216,13 +4121,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4256,13 +4160,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4296,13 +4199,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4334,13 +4236,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4373,13 +4274,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4413,13 +4313,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4453,13 +4352,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4492,13 +4390,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4526,13 +4423,12 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-kien-giang-top-15-dia-diem-khong-the-bo-lo/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-kien-giang-top-15-dia-diem-khong-the-bo-lo/</a
+                    >vinwonders.coma
                   >)
                 </figcaption>
               </figure>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -4588,7 +4484,7 @@
                   <a
                     href="https://www.tourdulichbentre.com/du-lich-lang-chai-rach-vem-phu-quoc-2019"
                     target="_blank"
-                    >https://www.tourdulichbentre.com/du-lich-lang-chai-rach-vem-phu-quoc-2019</a
+                    >tourdulichbentre.com</a
                   >)
                 </figcaption>
               </figure>
@@ -4622,7 +4518,7 @@
                   <a
                     href="https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/"
                     target="_blank"
-                    >https://vinwonders.com/vi/wonderpedia/news/du-lich-an-giang/</a
+                    >vinwonders.com</a
                   >)
                 </figcaption>
               </figure>
@@ -4631,13 +4527,8 @@
         </ol>
       </section>
       <hr />
-      <script>
-        const paragraphs = document.querySelectorAll("summary");
-        paragraphs.forEach((p) => p.classList.add("ccc"));
-      </script>
       <section class="w3-row w3-padding-16" id="tiemnang">
         <h1 class="w3-center" style="font-size: 50px">TIỀM NĂNG PHÁT TRIỂN</h1>
-
         <article style="font-size: 20px; line-height: 1.7">
           <p>
             <b>• Vị trí & vai trò chiến lược:</b>
@@ -4645,14 +4536,12 @@
             thương đường bộ và đường thủy, đặc biệt với Campuchia và tiểu vùng
             sông Mekong.
           </p>
-
           <p>
             <b>• Định hướng phát triển rõ ràng:</b>
             Phát triển theo Quy hoạch tỉnh thời kỳ 2021–2030, tầm nhìn đến 2050;
             gắn với Chiến lược phát triển kinh tế – xã hội 10 năm và giai đoạn
             2026–2030.
           </p>
-
           <p><b>• Lĩnh vực ưu tiên thu hút đầu tư:</b></p>
           <ul>
             <li>Dịch vụ – du lịch (du lịch văn hóa, tâm linh, sinh thái).</li>
@@ -4663,7 +4552,6 @@
               Logistics, cảng sông phục vụ vận chuyển hàng hóa quy mô lớn.
             </li>
           </ul>
-
           <p><b>• Lợi thế cạnh tranh:</b></p>
           <ul>
             <li>
@@ -4674,14 +4562,12 @@
               Chính sách ưu đãi đầu tư, môi trường đầu tư ngày càng cải thiện.
             </li>
           </ul>
-
           <p>
             <b>• Hạ tầng & liên kết:</b>
             Tập trung đầu tư hệ thống giao thông, logistics, cảng sông nhằm nâng
             cao năng lực kết nối vùng và thu hút các nhà đầu tư lớn trong và
             ngoài nước.
           </p>
-
           <p><b>• Cam kết của chính quyền:</b></p>
           <ul>
             <li>
@@ -4716,10 +4602,5 @@
     <footer class="w3-center w3-light-grey w3-padding-32">
       <p>hết!</p>
     </footer>
-    <script>
-      function toggleMenu() {
-        document.getElementById("navMenu").classList.toggle("w3-hide");
-      }
-    </script>
   </body>
 </html>
